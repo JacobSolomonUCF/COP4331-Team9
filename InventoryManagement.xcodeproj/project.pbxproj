@@ -18,6 +18,8 @@
 		AC2889541D35881300C3225F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2889521D35881300C3225F /* GoogleService-Info.plist */; };
 		AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889531D35881300C3225F /* WelcomeViewController.swift */; };
 		AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889561D35D44500C3225F /* CreateAccountViewController.swift */; };
+		AC2889591D35DF1400C3225F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889581D35DF1400C3225F /* SettingsViewController.swift */; };
+		AC28895B1D35DF2300C3225F /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28895A1D35DF2300C3225F /* InventoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		AC2889521D35881300C3225F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC2889531D35881300C3225F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AC2889561D35D44500C3225F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		AC2889581D35DF1400C3225F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AC28895A1D35DF2300C3225F /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		E94A9D2C10BB89A86C2CC627 /* Pods-InventoryManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagement/Pods-InventoryManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		F1F7C01EC3B9CFF93CCE99CE /* Pods-InventoryManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagement/Pods-InventoryManagement.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,14 +115,12 @@
 			isa = PBXGroup;
 			children = (
 				AC2889521D35881300C3225F /* GoogleService-Info.plist */,
-				AC2889531D35881300C3225F /* WelcomeViewController.swift */,
+				AC28895C1D35DF4400C3225F /* ViewControllers */,
 				167F61AC1D2EC6F000C3DCEC /* AppDelegate.swift */,
-				167F61AE1D2EC6F000C3DCEC /* LoginViewController.swift */,
 				167F61B01D2EC6F000C3DCEC /* Main.storyboard */,
 				167F61B31D2EC6F000C3DCEC /* Assets.xcassets */,
 				167F61B51D2EC6F000C3DCEC /* LaunchScreen.storyboard */,
 				167F61B81D2EC6F000C3DCEC /* Info.plist */,
-				AC2889561D35D44500C3225F /* CreateAccountViewController.swift */,
 			);
 			path = InventoryManagement;
 			sourceTree = "<group>";
@@ -156,6 +158,18 @@
 				41FEE53C6636A7C43393F92C /* Pods_InventoryManagement.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC28895C1D35DF4400C3225F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC2889531D35881300C3225F /* WelcomeViewController.swift */,
+				167F61AE1D2EC6F000C3DCEC /* LoginViewController.swift */,
+				AC2889561D35D44500C3225F /* CreateAccountViewController.swift */,
+				AC2889581D35DF1400C3225F /* SettingsViewController.swift */,
+				AC28895A1D35DF2300C3225F /* InventoryViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,8 +356,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */,
+				AC28895B1D35DF2300C3225F /* InventoryViewController.swift in Sources */,
 				AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */,
 				167F61AF1D2EC6F000C3DCEC /* LoginViewController.swift in Sources */,
+				AC2889591D35DF1400C3225F /* SettingsViewController.swift in Sources */,
 				167F61AD1D2EC6F000C3DCEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

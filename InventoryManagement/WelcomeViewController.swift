@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 class WelcomeViewController: UIViewController {
     
@@ -20,8 +21,18 @@ class WelcomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if(identifier == "logOutWelcome"){
+            return false
+        } else {
+            return true
+        }
+    }
 
     
     @IBAction func logoutAction(sender: AnyObject) {
+        try! FIRAuth.auth()?.signOut()
+        self.performSegueWithIdentifier("logOutWelcome", sender: sender)
     }
 }
