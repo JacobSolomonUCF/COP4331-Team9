@@ -7,14 +7,16 @@
 //
 
 import UIKit
-import Foundation
 import Firebase
 
 class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Transfer user back to login screen if not logged in
+        if(FIRAuth.auth()?.currentUser == nil){
+            self.performSegueWithIdentifier("logOutWelcome", sender: self)
+        }
     }
     
     override func didReceiveMemoryWarning() {

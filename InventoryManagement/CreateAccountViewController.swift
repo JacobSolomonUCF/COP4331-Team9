@@ -6,7 +6,6 @@
 //  Copyright © 2016 CNT4331-Team9. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Firebase
 
@@ -18,8 +17,9 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Sign user out if logged in
         if (FIRAuth.auth()?.currentUser) != nil {
-            
+            try! FIRAuth.auth()?.signOut()
         }
         
     }
