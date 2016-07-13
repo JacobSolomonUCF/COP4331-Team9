@@ -22,4 +22,6 @@ class WelcomeViewController: UIViewController {
     }
 
     
+    @IBAction func logoutAction(sender: AnyObject) {
+    }
 }

@@ -17,6 +17,7 @@
 		7D8E5B06F86C98D41482B1A3 /* Pods_InventoryManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FEE53C6636A7C43393F92C /* Pods_InventoryManagement.framework */; };
 		AC2889541D35881300C3225F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2889521D35881300C3225F /* GoogleService-Info.plist */; };
 		AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889531D35881300C3225F /* WelcomeViewController.swift */; };
+		AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889561D35D44500C3225F /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		41FEE53C6636A7C43393F92C /* Pods_InventoryManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2889521D35881300C3225F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC2889531D35881300C3225F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		AC2889561D35D44500C3225F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		E94A9D2C10BB89A86C2CC627 /* Pods-InventoryManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagement/Pods-InventoryManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		F1F7C01EC3B9CFF93CCE99CE /* Pods-InventoryManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagement/Pods-InventoryManagement.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				167F61B31D2EC6F000C3DCEC /* Assets.xcassets */,
 				167F61B51D2EC6F000C3DCEC /* LaunchScreen.storyboard */,
 				167F61B81D2EC6F000C3DCEC /* Info.plist */,
+				AC2889561D35D44500C3225F /* CreateAccountViewController.swift */,
 			);
 			path = InventoryManagement;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */,
 				AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */,
 				167F61AF1D2EC6F000C3DCEC /* LoginViewController.swift in Sources */,
 				167F61AD1D2EC6F000C3DCEC /* AppDelegate.swift in Sources */,

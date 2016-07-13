@@ -31,7 +31,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dnj-By-EPE"/>
-                                    <segue destination="7Ps-jk-OmA" kind="presentation" identifier="login" id="idD-ae-aak"/>
+                                    <segue destination="7Ps-jk-OmA" kind="showDetail" identifier="login" id="idD-ae-aak"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWC-Pq-hjb">
@@ -49,7 +49,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3E-vi-5go">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3E-vi-5go">
                                 <rect key="frame" x="117" y="161" width="140" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="MKs-ry-5NZ"/>
@@ -72,10 +72,10 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="udr-zb-gyQ" kind="presentation" identifier="Register" id="Eu2-Wv-c6u"/>
+                                    <segue destination="udr-zb-gyQ" kind="show" identifier="Register" id="Eu2-Wv-c6u"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jsF-DO-OTl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jsF-DO-OTl">
                                 <rect key="frame" x="20" y="229" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="-70.5" y="242.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="6cs-O2-LqW">
             <objects>
-                <viewController id="udr-zb-gyQ" customClass="ViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="udr-zb-gyQ" customClass="CreateAccountViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="09c-gO-dIh"/>
                         <viewControllerLayoutGuide type="bottom" id="BFl-Cp-AeV"/>
@@ -133,54 +133,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-9w-PaN">
-                                <rect key="frame" x="80" y="593" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-9w-PaN">
+                                <rect key="frame" x="20" y="593" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="d9u-M8-Vll"/>
+                                </constraints>
                                 <state key="normal" title="Go Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="yWD-eD-g62"/>
+                                    <action selector="backAction:" destination="udr-zb-gyQ" eventType="touchUpInside" id="dRC-FS-NeS"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backRegister" action="showViewController:sender:" id="yWD-eD-g62"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi2-5I-CMS">
-                                <rect key="frame" x="261" y="593" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi2-5I-CMS">
+                                <rect key="frame" x="298" y="593" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="createAccountAction:" destination="udr-zb-gyQ" eventType="touchUpInside" id="G2o-e7-CDR"/>
+                                    <segue destination="7Ps-jk-OmA" kind="showDetail" identifier="register" id="Vn6-wq-5Mh"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4K-Zr-tO6">
-                                <rect key="frame" x="23" y="154" width="335" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4K-Zr-tO6">
+                                <rect key="frame" x="123" y="166" width="129" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="63Y-YX-IDG"/>
+                                    <constraint firstAttribute="width" constant="129" id="szn-BP-U7n"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-iV-Gt2">
-                                <rect key="frame" x="113" y="206" width="154" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-iV-Gt2">
+                                <rect key="frame" x="20" y="206" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22y-h2-o7j">
-                                <rect key="frame" x="23" y="235" width="335" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22y-h2-o7j">
+                                <rect key="frame" x="122" y="245" width="136" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="8eh-cd-DLT"/>
+                                    <constraint firstAttribute="width" constant="136" id="P0s-uR-YXd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="n0R-Eo-kji">
-                                <rect key="frame" x="113" y="369" width="154" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEX-EB-nr7">
-                                <rect key="frame" x="20" y="316" width="338" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEX-EB-nr7">
+                                <rect key="frame" x="109" y="327" width="163" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Isb-kL-jzf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jgk-Pg-vE0">
-                                <rect key="frame" x="113" y="289" width="154" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jgk-Pg-vE0">
+                                <rect key="frame" x="20" y="289" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="n0R-Eo-kji">
+                                <rect key="frame" x="20" y="374" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BFl-Cp-AeV" firstAttribute="top" secondItem="hi2-5I-CMS" secondAttribute="bottom" constant="44" id="0wm-5I-eL0"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="centerX" secondItem="22y-h2-o7j" secondAttribute="centerX" constant="-2.5" id="3HA-jG-GLl"/>
+                            <constraint firstItem="zEX-EB-nr7" firstAttribute="top" secondItem="jgk-Pg-vE0" secondAttribute="bottom" constant="8" symbolic="YES" id="7Db-XZ-fyC"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="leading" secondItem="jgk-Pg-vE0" secondAttribute="leading" id="85Z-Ot-O4A"/>
+                            <constraint firstItem="hi2-5I-CMS" firstAttribute="baseline" secondItem="VTY-9w-PaN" secondAttribute="baseline" id="8jw-OT-MFg"/>
+                            <constraint firstItem="G4K-Zr-tO6" firstAttribute="centerX" secondItem="g6z-iV-Gt2" secondAttribute="centerX" id="DGC-TD-Mwt"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="leading" secondItem="bJo-Og-7xs" secondAttribute="leadingMargin" id="GZr-7b-bcj"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="trailing" secondItem="g6z-iV-Gt2" secondAttribute="trailing" id="Igg-R7-YpE"/>
+                            <constraint firstAttribute="bottom" secondItem="n0R-Eo-kji" secondAttribute="bottom" constant="263" id="Lkk-nu-1O8"/>
+                            <constraint firstItem="g6z-iV-Gt2" firstAttribute="top" secondItem="G4K-Zr-tO6" secondAttribute="bottom" constant="8" symbolic="YES" id="M2N-jD-xBR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n0R-Eo-kji" secondAttribute="trailing" id="NpT-Hu-Wsq"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="trailing" secondItem="jgk-Pg-vE0" secondAttribute="trailing" id="OOY-NM-2Om"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hi2-5I-CMS" secondAttribute="trailing" constant="4" id="SD9-52-tL6"/>
+                            <constraint firstItem="22y-h2-o7j" firstAttribute="top" secondItem="g6z-iV-Gt2" secondAttribute="bottom" constant="9" id="bcp-Oo-5Xa"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="leading" secondItem="g6z-iV-Gt2" secondAttribute="leading" id="ec6-yt-qWd"/>
+                            <constraint firstItem="zEX-EB-nr7" firstAttribute="leading" secondItem="bJo-Og-7xs" secondAttribute="leadingMargin" constant="93" id="euu-7u-WLb"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="centerX" secondItem="zEX-EB-nr7" secondAttribute="centerX" constant="-3" id="kyA-Sb-XIK"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="top" secondItem="zEX-EB-nr7" secondAttribute="bottom" constant="8" symbolic="YES" id="lWL-ls-zdT"/>
+                            <constraint firstItem="VTY-9w-PaN" firstAttribute="leading" secondItem="bJo-Og-7xs" secondAttribute="leadingMargin" constant="4" id="pvc-3j-uJb"/>
+                            <constraint firstItem="jgk-Pg-vE0" firstAttribute="top" secondItem="22y-h2-o7j" secondAttribute="bottom" constant="8" symbolic="YES" id="wN2-l3-bNg"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailField" destination="g6z-iV-Gt2" id="SvP-jt-tPd"/>
+                        <outlet property="passConfirmField" destination="n0R-Eo-kji" id="J3u-gA-HEE"/>
+                        <outlet property="passField" destination="jgk-Pg-vE0" id="eR7-Zs-gmy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuM-r0-lSH" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +255,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
+                                    <action selector="logoutAction:" destination="7Ps-jk-OmA" eventType="touchUpInside" id="pwq-AO-Udx"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="6Qm-Sr-Yph"/>
                                 </connections>
                             </button>
@@ -323,7 +370,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Qm-Sr-Yph"/>
-        <segue reference="idD-ae-aak"/>
+        <segue reference="yWD-eD-g62"/>
+        <segue reference="Vn6-wq-5Mh"/>
     </inferredMetricsTieBreakers>
 </document>

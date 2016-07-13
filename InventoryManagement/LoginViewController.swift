@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (FIRAuth.auth()?.currentUser) != nil {
-            
+        if (FIRAuth.auth()?.currentUser != nil ){
+            try! FIRAuth.auth()?.signOut()
         }
         
     }
