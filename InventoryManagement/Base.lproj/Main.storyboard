@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="-70.5" y="242.5"/>
         </scene>
-        <!--Create Account View Controller-->
+        <!--CreateAccount-->
         <scene sceneID="6cs-O2-LqW">
             <objects>
-                <viewController id="udr-zb-gyQ" customClass="CreateAccountViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CreateAccount" id="udr-zb-gyQ" customClass="CreateAccountViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="09c-gO-dIh"/>
                         <viewControllerLayoutGuide type="bottom" id="BFl-Cp-AeV"/>
@@ -284,10 +284,10 @@
             </objects>
             <point key="canvasLocation" x="514.5" y="-226.5"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--LandingPage-->
         <scene sceneID="FrZ-cg-Q3G">
             <objects>
-                <viewController id="7Ps-jk-OmA" customClass="WelcomeViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LandingPage" id="7Ps-jk-OmA" customClass="WelcomeViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hkf-p8-bAM"/>
                         <viewControllerLayoutGuide type="bottom" id="uhO-LU-qDb"/>
@@ -393,10 +393,10 @@
             </objects>
             <point key="canvasLocation" x="456.5" y="634.5"/>
         </scene>
-        <!--View Controller-->
+        <!--InventoryPage-->
         <scene sceneID="WHt-zM-zHw">
             <objects>
-                <viewController id="2Ml-Ak-3Rt" sceneMemberID="viewController">
+                <viewController title="InventoryPage" id="2Ml-Ak-3Rt" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sfj-aE-frh"/>
                         <viewControllerLayoutGuide type="bottom" id="Vnn-qr-Ik0"/>
@@ -439,10 +439,10 @@
             </objects>
             <point key="canvasLocation" x="1009.5" y="292.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="Omq-Wd-v0K">
             <objects>
-                <viewController id="tFy-xa-P3a" sceneMemberID="viewController">
+                <viewController title="Settings" id="tFy-xa-P3a" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sl1-Kz-8cg"/>
                         <viewControllerLayoutGuide type="bottom" id="2z6-pK-JSK"/>
@@ -483,11 +483,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coh-a5-Bc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009.5" y="1105.5"/>
+            <point key="canvasLocation" x="1047.5" y="1095.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6Qm-Sr-Yph"/>
-        <segue reference="idD-ae-aak"/>
+        <segue reference="taz-Ss-xDb"/>
     </inferredMetricsTieBreakers>
 </document>
