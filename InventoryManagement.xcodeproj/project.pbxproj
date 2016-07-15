@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16535D241D38E6900078473D /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16535D231D38E6900078473D /* bg.jpg */; };
 		167F61AD1D2EC6F000C3DCEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F61AC1D2EC6F000C3DCEC /* AppDelegate.swift */; };
 		167F61AF1D2EC6F000C3DCEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F61AE1D2EC6F000C3DCEC /* LoginViewController.swift */; };
 		167F61B21D2EC6F000C3DCEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167F61B01D2EC6F000C3DCEC /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16535D231D38E6900078473D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		167F61A91D2EC6F000C3DCEC /* InventoryManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167F61AC1D2EC6F000C3DCEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167F61AE1D2EC6F000C3DCEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		167F61AB1D2EC6F000C3DCEC /* InventoryManagement */ = {
 			isa = PBXGroup;
 			children = (
+				16535D231D38E6900078473D /* bg.jpg */,
 				AC2889521D35881300C3225F /* GoogleService-Info.plist */,
 				AC28895C1D35DF4400C3225F /* ViewControllers */,
 				167F61AC1D2EC6F000C3DCEC /* AppDelegate.swift */,
@@ -246,6 +249,7 @@
 				TargetAttributes = {
 					167F61A81D2EC6F000C3DCEC = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 68UXX2W585;
 					};
 					167F61BC1D2EC6F000C3DCEC = {
 						CreatedOnToolsVersion = 7.3;
@@ -282,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16535D241D38E6900078473D /* bg.jpg in Resources */,
 				167F61B71D2EC6F000C3DCEC /* LaunchScreen.storyboard in Resources */,
 				AC2889541D35881300C3225F /* GoogleService-Info.plist in Resources */,
 				167F61B41D2EC6F000C3DCEC /* Assets.xcassets in Resources */,
@@ -509,10 +514,13 @@
 			baseConfigurationReference = E94A9D2C10BB89A86C2CC627 /* Pods-InventoryManagement.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InventoryManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C.InventoryManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -521,10 +529,13 @@
 			baseConfigurationReference = F1F7C01EC3B9CFF93CCE99CE /* Pods-InventoryManagement.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InventoryManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C.InventoryManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

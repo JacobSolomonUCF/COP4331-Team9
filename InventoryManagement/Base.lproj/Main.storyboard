@@ -27,7 +27,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Login ">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dnj-By-EPE"/>
@@ -62,7 +62,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Create Account">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="udr-zb-gyQ" kind="show" identifier="register" id="Eu2-Wv-c6u"/>
@@ -161,7 +161,9 @@
                                     <constraint firstAttribute="width" secondItem="VTY-9w-PaN" secondAttribute="height" multiplier="5:2" id="IE0-Vg-dhh"/>
                                     <constraint firstAttribute="height" constant="30" id="wLa-Th-C07"/>
                                 </constraints>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.047906167805194855" green="0.011695610359311104" blue="0.0072584436275064945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="backAction:" destination="udr-zb-gyQ" eventType="touchUpInside" id="dRC-FS-NeS"/>
                                     <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backRegister" action="showViewController:sender:" id="yWD-eD-g62"/>
@@ -176,7 +178,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="createAccountAction:" destination="udr-zb-gyQ" eventType="touchUpInside" id="G2o-e7-CDR"/>
@@ -282,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuM-r0-lSH" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514.5" y="-226.5"/>
+            <point key="canvasLocation" x="512.5" y="-234.5"/>
         </scene>
         <!--LandingPage-->
         <scene sceneID="FrZ-cg-Q3G">
@@ -296,22 +298,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cm-Ly-umI">
-                                <rect key="frame" x="20" y="75" width="335" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3Xa-Kq-Cae"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WP1-yg-qnf">
                                 <rect key="frame" x="0.0" y="20" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="J9o-od-b5e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Log out"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="logoutAction:" destination="7Ps-jk-OmA" eventType="touchUpInside" id="pwq-AO-Udx"/>
                                     <segue destination="BYZ-38-t0r" kind="showDetail" identifier="logOutWelcome" action="showViewController:sender:" id="6Qm-Sr-Yph"/>
@@ -325,7 +320,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="View Inventory">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="2Ml-Ak-3Rt" kind="show" identifier="viewInventory" id="IKh-i2-S18"/>
@@ -339,7 +334,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Item">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="XBA-lg-HU2" kind="show" id="c7A-WT-00I"/>
@@ -353,7 +348,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Update Item">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ae-ra-qta">
@@ -363,12 +358,21 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="tFy-xa-P3a" kind="show" identifier="viewSettings" id="JTA-8m-78H"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iNVENTORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cm-Ly-umI">
+                                <rect key="frame" x="20" y="75" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Xa-Kq-Cae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -399,7 +403,7 @@
         <!--InventoryPage-->
         <scene sceneID="WHt-zM-zHw">
             <objects>
-                <viewController title="InventoryPage" id="2Ml-Ak-3Rt" sceneMemberID="viewController">
+                <viewController title="InventoryPage" id="2Ml-Ak-3Rt" customClass="InventoryViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sfj-aE-frh"/>
                         <viewControllerLayoutGuide type="bottom" id="Vnn-qr-Ik0"/>
@@ -414,7 +418,9 @@
                                     <constraint firstAttribute="width" constant="75" id="d80-AI-SAE"/>
                                     <constraint firstAttribute="height" constant="30" id="kir-52-7Oh"/>
                                 </constraints>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="7Ps-jk-OmA" kind="show" identifier="backInventory" id="cEK-PK-8aU"/>
                                 </connections>
@@ -445,7 +451,7 @@
         <!--Settings-->
         <scene sceneID="Omq-Wd-v0K">
             <objects>
-                <viewController title="Settings" id="tFy-xa-P3a" sceneMemberID="viewController">
+                <viewController title="Settings" id="tFy-xa-P3a" customClass="SettingsViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sl1-Kz-8cg"/>
                         <viewControllerLayoutGuide type="bottom" id="2z6-pK-JSK"/>
@@ -466,7 +472,9 @@
                                     <constraint firstAttribute="height" constant="30" id="4yd-Jn-ESR"/>
                                     <constraint firstAttribute="width" constant="100" id="am4-9s-h0l"/>
                                 </constraints>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="7Ps-jk-OmA" kind="show" identifier="backSettings" id="taz-Ss-xDb"/>
                                 </connections>
@@ -488,10 +496,10 @@
             </objects>
             <point key="canvasLocation" x="1053.5" y="1131.5"/>
         </scene>
-        <!--Settings-->
+        <!--Add Item-->
         <scene sceneID="64d-fP-gDM">
             <objects>
-                <viewController title="Settings" id="XBA-lg-HU2" customClass="addItemController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Item" id="XBA-lg-HU2" customClass="addItemController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o0P-Cz-nXe"/>
                         <viewControllerLayoutGuide type="bottom" id="ryF-Nb-SMv"/>
@@ -500,12 +508,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add a Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brM-Oy-VYm">
-                                <rect key="frame" x="20" y="75" width="335" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-mM-rMt">
                                 <rect key="frame" x="20" y="123" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -520,7 +522,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EN3-aG-dYL">
                                 <rect key="frame" x="20" y="219" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3n-V6-Tc1">
                                 <rect key="frame" x="20" y="190" width="335" height="21"/>
@@ -542,7 +544,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add Item">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JL-00-GoW">
@@ -553,7 +555,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="7Ps-jk-OmA" kind="show" id="3Pu-lI-M2x"/>
@@ -562,15 +564,16 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kl2-Z0-TOi">
                                 <rect key="frame" x="20" y="286" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-kl-5RR">
+                                <rect key="frame" x="20" y="61" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="brM-Oy-VYm" firstAttribute="centerX" secondItem="SpC-Ka-kRQ" secondAttribute="centerX" id="1JF-Fd-g3B"/>
-                            <constraint firstItem="brM-Oy-VYm" firstAttribute="leading" secondItem="SpC-Ka-kRQ" secondAttribute="leadingMargin" constant="4" id="R3E-ID-Vnc"/>
-                            <constraint firstItem="ryF-Nb-SMv" firstAttribute="top" secondItem="brM-Oy-VYm" secondAttribute="bottom" constant="547" id="vUw-cq-hIV"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -585,7 +588,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3Pu-lI-M2x"/>
         <segue reference="6Qm-Sr-Yph"/>
+        <segue reference="taz-Ss-xDb"/>
     </inferredMetricsTieBreakers>
 </document>

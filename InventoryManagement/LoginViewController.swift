@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
         // Sign user out if logged in when reaching this screen
         if (FIRAuth.auth()?.currentUser != nil ){
             try! FIRAuth.auth()?.signOut()

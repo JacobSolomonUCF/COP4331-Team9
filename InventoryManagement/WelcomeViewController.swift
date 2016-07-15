@@ -13,6 +13,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
         // Transfer user back to login screen if not logged in
         if(FIRAuth.auth()?.currentUser == nil){
             self.performSegueWithIdentifier("logOutWelcome", sender: self)
