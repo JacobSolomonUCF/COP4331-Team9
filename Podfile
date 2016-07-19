@@ -6,7 +6,7 @@ target 'InventoryManagement' do
   use_frameworks!
 
   # Pods for InventoryManagement
-    pod 'Firebase/Auth'
+    pod 'Firebase/Auth', '>= 2.5.1'
     pod 'Firebase/Database'
     pod 'Firebase/Core'
 

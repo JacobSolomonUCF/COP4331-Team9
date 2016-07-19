@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
+import Foundation
 
 class addItemController: UIViewController {
+    
+
     
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var itemNumber: UITextField!
@@ -16,9 +20,9 @@ class addItemController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
     
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,16 +31,51 @@ class addItemController: UIViewController {
     }
     
     
-    
-    @IBAction func additemPressed(sender: UIButton) {
+    @IBAction func addPressed(sender: UIButton) {
         
-        if (self.itemName.text == " " || self.itemNumber.text == " " || self.itemQuantity == " ") {
-            let alertController = UIAlertController(title: "Oops!", message: "Pleae enter an Item name, number, and quantity", preferredStyle: .Alert)
+        if(self.itemName.text == "" || self.itemNumber.text == "" || self.itemQuantity.text == "" ){
+            let alertController = UIAlertController(title: "Oops!", message: "Please enter a valid Item Name/Number/Quantity", preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
             alertController.addAction(defaultAction)
-        }
-    }
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }else{
+        
+            let rootRef = FIRDatabase.database().reference()
+            let userID = FIRAuth.auth()!.currentUser!.uid;      //USER ID is the key for the database
+            let key = itemNumber.text! as NSString
+        
+            let post = ["itemName": self.itemName.text! as NSString,
+                        "itemNumber": self.itemNumber.text! as NSString,
+                        "itemQuantity": self.itemQuantity.text! as NSString]
+            
+            let childUpdates = ["/items/\(userID)/\(key)": post,]
+            rootRef.updateChildValues(childUpdates)
+            
+            
+        
 
+        }
+    
+    }
+    
+    //Testing function
+    @IBAction func TEST(sender: UIButton) {
+        let ref = FIRDatabase.database().reference()
+        let userID = FIRAuth.auth()!.currentUser!.uid;
+        ref.child("/items/\(userID)/1").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            // Get user value
+            let test = snapshot.value!["itemName"] as! String
+            print(test)
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        let query = ref.child("/items/\(userID)").queryOrderedByChild("itemName");
+        print(query)
+    }
     
     
     

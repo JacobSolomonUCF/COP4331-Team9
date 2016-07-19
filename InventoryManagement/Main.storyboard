@@ -323,7 +323,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2Ml-Ak-3Rt" kind="show" identifier="viewInventory" id="IKh-i2-S18"/>
+                                    <segue destination="KdT-Ev-lxr" kind="show" id="eoe-pR-6Td"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZf-6T-Nvp">
@@ -400,53 +400,34 @@
             </objects>
             <point key="canvasLocation" x="362.5" y="906.5"/>
         </scene>
-        <!--InventoryPage-->
-        <scene sceneID="WHt-zM-zHw">
+        <!--Inventory Table View Controller-->
+        <scene sceneID="Nf8-oR-lVh">
             <objects>
-                <viewController title="InventoryPage" id="2Ml-Ak-3Rt" customClass="InventoryViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Sfj-aE-frh"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vnn-qr-Ik0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DHv-op-gqk">
+                <tableViewController id="KdT-Ev-lxr" customClass="InventoryTableViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ked-Rp-4Zc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlE-Ng-f4m">
-                                <rect key="frame" x="0.0" y="20" width="75" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="d80-AI-SAE"/>
-                                    <constraint firstAttribute="height" constant="30" id="kir-52-7Oh"/>
-                                </constraints>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7Ps-jk-OmA" kind="show" identifier="backInventory" id="cEK-PK-8aU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onN-gH-acO">
-                                <rect key="frame" x="20" y="75" width="335" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dlE-Ng-f4m" firstAttribute="leading" secondItem="DHv-op-gqk" secondAttribute="leading" id="BEG-Bf-27b"/>
-                            <constraint firstItem="onN-gH-acO" firstAttribute="centerX" secondItem="DHv-op-gqk" secondAttribute="centerX" id="HhL-CN-8s0"/>
-                            <constraint firstItem="Vnn-qr-Ik0" firstAttribute="top" secondItem="onN-gH-acO" secondAttribute="bottom" constant="547" id="Phv-YU-36J"/>
-                            <constraint firstItem="dlE-Ng-f4m" firstAttribute="top" secondItem="Sfj-aE-frh" secondAttribute="bottom" id="Tau-c7-ILb"/>
-                            <constraint firstItem="onN-gH-acO" firstAttribute="leading" secondItem="DHv-op-gqk" secondAttribute="leadingMargin" constant="4" id="noB-4J-3SD"/>
-                            <constraint firstItem="onN-gH-acO" firstAttribute="top" secondItem="dlE-Ng-f4m" secondAttribute="bottom" constant="25" id="sVn-we-R9K"/>
-                        </constraints>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InvTableViewCell" rowHeight="90" id="HzP-P8-WOP" customClass="InvTableViewCell" customModule="InventoryManagement" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HzP-P8-WOP" id="bWW-1l-NWx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KdT-Ev-lxr" id="VFq-WP-RAf"/>
+                            <outlet property="delegate" destination="KdT-Ev-lxr" id="kiG-nU-L6e"/>
+                        </connections>
+                    </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L2B-ze-C1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S1n-aU-dPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009.5" y="292.5"/>
+            <point key="canvasLocation" x="895.5" y="537.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Omq-Wd-v0K">
@@ -494,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coh-a5-Bc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053.5" y="1131.5"/>
+            <point key="canvasLocation" x="1081.5" y="1341.5"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="64d-fP-gDM">
@@ -546,6 +527,9 @@
                                 <state key="normal" title="Add Item">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPressed:" destination="XBA-lg-HU2" eventType="touchUpInside" id="7sW-XN-rrl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JL-00-GoW">
                                 <rect key="frame" x="192" y="602" width="163" height="45"/>
@@ -572,6 +556,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V7-N0-UWr">
+                                <rect key="frame" x="93" y="493" width="157" height="61"/>
+                                <state key="normal" title="TEST"/>
+                                <connections>
+                                    <action selector="TEST:" destination="XBA-lg-HU2" eventType="touchUpInside" id="Qbc-Ao-zvh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -584,11 +575,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ad7-0o-mbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-117.5" y="1203.5"/>
+            <point key="canvasLocation" x="-291.5" y="1207.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="3Pu-lI-M2x"/>
         <segue reference="6Qm-Sr-Yph"/>
-        <segue reference="taz-Ss-xDb"/>
     </inferredMetricsTieBreakers>
 </document>
