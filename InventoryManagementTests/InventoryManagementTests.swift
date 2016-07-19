@@ -7,7 +7,8 @@
 //
 
 import XCTest
-@testable import InventoryManagement
+
+//@testable import InventoryManagement
 
 class InventoryManagementTests: XCTestCase {
     
