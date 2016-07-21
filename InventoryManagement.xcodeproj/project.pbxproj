@@ -19,11 +19,11 @@
 		813941BB06E049E10310ED81 /* Pods_InventoryManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B813A2ED93110C1417E6DED /* Pods_InventoryManagement.framework */; };
 		AC1C8FCA1D4060F300A5E004 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C8FC91D4060F300A5E004 /* InventoryTableViewCell.swift */; };
 		AC1C8FCE1D40634300A5E004 /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C8FCD1D40634300A5E004 /* InventoryTableViewController.swift */; };
+		AC1C8FD01D4189A600A5E004 /* UpdateItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C8FCF1D4189A600A5E004 /* UpdateItemViewController.swift */; };
 		AC2889541D35881300C3225F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2889521D35881300C3225F /* GoogleService-Info.plist */; };
 		AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889531D35881300C3225F /* WelcomeViewController.swift */; };
 		AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889561D35D44500C3225F /* CreateAccountViewController.swift */; };
 		AC2889591D35DF1400C3225F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889581D35DF1400C3225F /* SettingsViewController.swift */; };
-		AC28895B1D35DF2300C3225F /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28895A1D35DF2300C3225F /* InventoryViewController.swift */; };
 		DA6F75D9F755C7B5485841D8 /* Pods_InventoryManagementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9634623B300986BA7D7A6F5A /* Pods_InventoryManagementTests.framework */; };
 		E0FBAFFE55A70D60CAE059BC /* Pods_InventoryManagementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD309569F6446A048F3815 /* Pods_InventoryManagementUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,11 +67,11 @@
 		9634623B300986BA7D7A6F5A /* Pods_InventoryManagementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryManagementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1C8FC91D4060F300A5E004 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
 		AC1C8FCD1D40634300A5E004 /* InventoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
+		AC1C8FCF1D4189A600A5E004 /* UpdateItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateItemViewController.swift; sourceTree = "<group>"; };
 		AC2889521D35881300C3225F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC2889531D35881300C3225F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AC2889561D35D44500C3225F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		AC2889581D35DF1400C3225F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		AC28895A1D35DF2300C3225F /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		B0712041233830D0D1049100 /* Pods-InventoryManagementUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagementUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagementUITests/Pods-InventoryManagementUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBDD309569F6446A048F3815 /* Pods_InventoryManagementUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryManagementUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF05F3D2677C439FA40CA76C /* Pods-InventoryManagementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagementTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagementTests/Pods-InventoryManagementTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,9 +193,9 @@
 				167F61AE1D2EC6F000C3DCEC /* LoginViewController.swift */,
 				AC2889561D35D44500C3225F /* CreateAccountViewController.swift */,
 				AC2889581D35DF1400C3225F /* SettingsViewController.swift */,
-				AC28895A1D35DF2300C3225F /* InventoryViewController.swift */,
 				16F2769F1D38297F00F30D1A /* addItemController.swift */,
 				AC1C8FCD1D40634300A5E004 /* InventoryTableViewController.swift */,
+				AC1C8FCF1D4189A600A5E004 /* UpdateItemViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -467,8 +467,8 @@
 			files = (
 				AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */,
 				AC1C8FCA1D4060F300A5E004 /* InventoryTableViewCell.swift in Sources */,
-				AC28895B1D35DF2300C3225F /* InventoryViewController.swift in Sources */,
 				AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */,
+				AC1C8FD01D4189A600A5E004 /* UpdateItemViewController.swift in Sources */,
 				167F61AF1D2EC6F000C3DCEC /* LoginViewController.swift in Sources */,
 				AC2889591D35DF1400C3225F /* SettingsViewController.swift in Sources */,
 				16F276A01D38297F00F30D1A /* addItemController.swift in Sources */,
