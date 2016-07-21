@@ -16,6 +16,8 @@ class InventoryTableViewController: UITableViewController {
     //MARK: Properties
 
     @IBOutlet var inventoryTableView: UITableView!
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var sortButton: UIBarButtonItem!
     
     var items = [Item]();
     
@@ -29,7 +31,7 @@ class InventoryTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
+        self.inventoryTableView.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,6 +39,19 @@ class InventoryTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         loadItems()
+        inventoryTableView.tableFooterView = UIView();
+    }
+    
+    func sortItemsAlphabetically(){
+        items.sortInPlace{$0.name.lowercaseString < $1.name.lowercaseString}
+        self.sortButton.title = "Sort By Number"
+        self.inventoryTableView.reloadData()
+    }
+    
+    func sortItemsByNumber(){
+        items.sortInPlace{$0.number < $1.number}
+        self.sortButton.title = "Sort By Name"
+        self.inventoryTableView.reloadData()
     }
     
     
@@ -58,11 +73,19 @@ class InventoryTableViewController: UITableViewController {
 
                 self.items.append(newItem)
             }
-            self.inventoryTableView.reloadData()
+            self.sortItemsByNumber()
         })
         
     }
 
+    @IBAction func sortButtonTapped(sender: AnyObject) {
+        if(self.sortButton.title == "Sort By Name"){
+            sortItemsAlphabetically()
+        } else {
+            sortItemsByNumber()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -87,7 +110,8 @@ class InventoryTableViewController: UITableViewController {
         cell.nameLabel.text = item.name
         cell.numberLabel.text = item.number
         cell.quantityLabel.text = item.quantity
-
+        cell.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
+        
         return cell
     }
     

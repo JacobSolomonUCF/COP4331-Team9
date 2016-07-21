@@ -34,14 +34,20 @@ class addItemController: UIViewController {
     
     @IBAction func addPressed(sender: UIButton) {
         
-        if(self.itemName.text == "" || self.itemNumber.text == "" || self.itemQuantity.text == "" ){
+        if(self.itemName.text! == "" || self.itemNumber.text == "" || self.itemQuantity.text == "" ){
             let alertController = UIAlertController(title: "Oops!", message: "Please enter a valid Item Name/Number/Quantity", preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
             alertController.addAction(defaultAction)
             
             self.presentViewController(alertController, animated: true, completion: nil)
             
-        }else{
+        } else if(Int(self.itemNumber.text!) == nil || Int(self.itemQuantity.text!) == nil){
+            let alertController = UIAlertController(title: "Oops!", message: "Please enter only numbers for Number/Quantity", preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+            alertController.addAction(defaultAction)
+        
+            self.presentViewController(alertController, animated: true, completion: nil)
+        } else{
         
             let rootRef = FIRDatabase.database().reference()
             let userID = FIRAuth.auth()!.currentUser!.uid;      //USER ID is the key for the database
@@ -54,33 +60,14 @@ class addItemController: UIViewController {
             let childUpdates = ["/items/\(userID)/\(key)": post,]
             rootRef.updateChildValues(childUpdates)
             
-            
-        
+            self.itemName.text = ""
+            self.itemNumber.text = ""
+            self.itemQuantity.text = ""
 
         }
     
     }
     
-    //Testing function
-    @IBAction func TEST(sender: UIButton) {
-        let ref = FIRDatabase.database().reference()
-        let userID = FIRAuth.auth()!.currentUser!.uid;
-        ref.child("/items/\(userID)/1").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            // Get user value
-            let test = snapshot.value!["itemName"] as! String
-            print(test)
-            
-            // ...
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        let query = ref.child("/items/\(userID)").queryOrderedByChild("itemName");
-        print(query)
-    }
-    
-    
-    
-
     /*
     // MARK: - Navigation
 
