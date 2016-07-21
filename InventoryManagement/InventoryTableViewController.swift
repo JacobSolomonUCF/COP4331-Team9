@@ -2,22 +2,65 @@
 //  InventoryTableViewController.swift
 //  InventoryManagement
 //
-//  Created by Jacob Solomon on 7/19/16.
+//  Created by Robert Brown on 7/20/16.
 //  Copyright © 2016 CNT4331-Team9. All rights reserved.
 //
 
 import UIKit
+import Foundation
+import Firebase
+import FirebaseDatabase
 
 class InventoryTableViewController: UITableViewController {
+    
+    //MARK: Properties
+
+    @IBOutlet var inventoryTableView: UITableView!
+    
+    var items = [Item]();
+    
+    struct Item{
+        var name: String;
+        var number: String;
+        var quantity: String;
+    };
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadItems()
+    }
+    
+    
+    func loadItems(){
+        let ref = FIRDatabase.database().reference()
+        let userID = FIRAuth.auth()!.currentUser!.uid;
+        ref.child("items/\(userID)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        
+            let children = snapshot.children
+            
+            for _ in 0..<snapshot.childrenCount{
+                let child = children.nextObject()
+                
+                let childSnapshot = snapshot.childSnapshotForPath(child!.key)
+                let name = childSnapshot.value!["itemName"] as! String
+                let number = childSnapshot.value!["itemNumber"] as! String
+                let quantity = childSnapshot.value!["itemQuantity"] as! String
+                let newItem = Item(name: name, number: number, quantity: quantity)
+
+                self.items.append(newItem)
+            }
+            self.inventoryTableView.reloadData()
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +71,26 @@ class InventoryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.items.count
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-        // Configure the cell...
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellIdentifier = "InventoryTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! InventoryTableViewCell
+        
+        let item = self.items[indexPath.row]
+        cell.nameLabel.text = item.name
+        cell.numberLabel.text = item.number
+        cell.quantityLabel.text = item.quantity
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

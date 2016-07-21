@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import Foundation
+import FirebaseDatabase
 
 class addItemController: UIViewController {
     

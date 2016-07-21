@@ -14,11 +14,11 @@
 		167F61B71D2EC6F000C3DCEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167F61B51D2EC6F000C3DCEC /* LaunchScreen.storyboard */; };
 		167F61C21D2EC6F000C3DCEC /* InventoryManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F61C11D2EC6F000C3DCEC /* InventoryManagementTests.swift */; };
 		167F61CD1D2EC6F000C3DCEC /* InventoryManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F61CC1D2EC6F000C3DCEC /* InventoryManagementUITests.swift */; };
-		16B6C3D91D3E99E7009853D2 /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6C3D81D3E99E7009853D2 /* InventoryTableViewController.swift */; };
-		16B6C3DB1D3E9D8E009853D2 /* InvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6C3DA1D3E9D8E009853D2 /* InvTableViewCell.swift */; };
 		16F276A01D38297F00F30D1A /* addItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F2769F1D38297F00F30D1A /* addItemController.swift */; };
 		16F5AFAB1D3EBEFF002B7D84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F5AFAA1D3EBEFF002B7D84 /* Main.storyboard */; };
 		813941BB06E049E10310ED81 /* Pods_InventoryManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B813A2ED93110C1417E6DED /* Pods_InventoryManagement.framework */; };
+		AC1C8FCA1D4060F300A5E004 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C8FC91D4060F300A5E004 /* InventoryTableViewCell.swift */; };
+		AC1C8FCE1D40634300A5E004 /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C8FCD1D40634300A5E004 /* InventoryTableViewController.swift */; };
 		AC2889541D35881300C3225F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2889521D35881300C3225F /* GoogleService-Info.plist */; };
 		AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889531D35881300C3225F /* WelcomeViewController.swift */; };
 		AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889561D35D44500C3225F /* CreateAccountViewController.swift */; };
@@ -60,13 +60,13 @@
 		167F61C81D2EC6F000C3DCEC /* InventoryManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		167F61CC1D2EC6F000C3DCEC /* InventoryManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryManagementUITests.swift; sourceTree = "<group>"; };
 		167F61CE1D2EC6F000C3DCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16B6C3D81D3E99E7009853D2 /* InventoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
-		16B6C3DA1D3E9D8E009853D2 /* InvTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvTableViewCell.swift; sourceTree = "<group>"; };
 		16F2769F1D38297F00F30D1A /* addItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addItemController.swift; sourceTree = "<group>"; };
 		16F5AFAA1D3EBEFF002B7D84 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2B813A2ED93110C1417E6DED /* Pods_InventoryManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54244C0FFDCEF563AAD461CD /* Pods-InventoryManagementUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagementUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagementUITests/Pods-InventoryManagementUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9634623B300986BA7D7A6F5A /* Pods_InventoryManagementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryManagementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1C8FC91D4060F300A5E004 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
+		AC1C8FCD1D40634300A5E004 /* InventoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
 		AC2889521D35881300C3225F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC2889531D35881300C3225F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AC2889561D35D44500C3225F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +140,7 @@
 				167F61B31D2EC6F000C3DCEC /* Assets.xcassets */,
 				167F61B51D2EC6F000C3DCEC /* LaunchScreen.storyboard */,
 				167F61B81D2EC6F000C3DCEC /* Info.plist */,
+				AC1C8FC91D4060F300A5E004 /* InventoryTableViewCell.swift */,
 			);
 			path = InventoryManagement;
 			sourceTree = "<group>";
@@ -194,8 +195,7 @@
 				AC2889581D35DF1400C3225F /* SettingsViewController.swift */,
 				AC28895A1D35DF2300C3225F /* InventoryViewController.swift */,
 				16F2769F1D38297F00F30D1A /* addItemController.swift */,
-				16B6C3D81D3E99E7009853D2 /* InventoryTableViewController.swift */,
-				16B6C3DA1D3E9D8E009853D2 /* InvTableViewCell.swift */,
+				AC1C8FCD1D40634300A5E004 /* InventoryTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -465,15 +465,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16B6C3DB1D3E9D8E009853D2 /* InvTableViewCell.swift in Sources */,
 				AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */,
+				AC1C8FCA1D4060F300A5E004 /* InventoryTableViewCell.swift in Sources */,
 				AC28895B1D35DF2300C3225F /* InventoryViewController.swift in Sources */,
-				16B6C3D91D3E99E7009853D2 /* InventoryTableViewController.swift in Sources */,
 				AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */,
 				167F61AF1D2EC6F000C3DCEC /* LoginViewController.swift in Sources */,
 				AC2889591D35DF1400C3225F /* SettingsViewController.swift in Sources */,
 				16F276A01D38297F00F30D1A /* addItemController.swift in Sources */,
 				167F61AD1D2EC6F000C3DCEC /* AppDelegate.swift in Sources */,
+				AC1C8FCE1D40634300A5E004 /* InventoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
