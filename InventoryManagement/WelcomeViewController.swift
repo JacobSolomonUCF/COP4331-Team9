@@ -18,6 +18,7 @@ class WelcomeViewController: UIViewController {
         if(FIRAuth.auth()?.currentUser == nil){
             self.performSegueWithIdentifier("logOutWelcome", sender: self)
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
