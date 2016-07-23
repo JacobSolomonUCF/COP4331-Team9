@@ -17,7 +17,7 @@ class InventoryTableViewController: UITableViewController {
 
     @IBOutlet var inventoryTableView: UITableView!
     @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var sortButton: UIBarButtonItem!
+    var parent: ContainerViewController!
     
     var items = [Item]();
     
@@ -29,7 +29,7 @@ class InventoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.inventoryTableView.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
         // Uncomment the following line to preserve selection between presentations
@@ -39,18 +39,17 @@ class InventoryTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         loadItems()
-        inventoryTableView.tableFooterView = UIView();
+        self.inventoryTableView.tableFooterView = UIView();
     }
+    
     
     func sortItemsAlphabetically(){
         items.sortInPlace{$0.name.lowercaseString < $1.name.lowercaseString}
-        self.sortButton.title = "Sort By Number"
         self.inventoryTableView.reloadData()
     }
     
     func sortItemsByNumber(){
         items.sortInPlace{$0.number < $1.number}
-        self.sortButton.title = "Sort By Name"
         self.inventoryTableView.reloadData()
     }
     
@@ -76,14 +75,6 @@ class InventoryTableViewController: UITableViewController {
             self.sortItemsByNumber()
         })
         
-    }
-
-    @IBAction func sortButtonTapped(sender: AnyObject) {
-        if(self.sortButton.title == "Sort By Name"){
-            sortItemsAlphabetically()
-        } else {
-            sortItemsByNumber()
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,25 +107,32 @@ class InventoryTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            let ref = FIRDatabase.database().reference()
+            let userID = FIRAuth.auth()!.currentUser!.uid;
+            let itemNumber = (tableView.cellForRowAtIndexPath(indexPath) as! InventoryTableViewCell).numberLabel!.text!
+            ref.child("items/\(userID)/\(itemNumber)").removeValueWithCompletionBlock({ _,_ in
+                self.items.removeAtIndex(indexPath.row)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            })
+
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+     
 
     /*
     // Override to support rearranging the table view.

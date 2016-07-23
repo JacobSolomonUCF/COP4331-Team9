@@ -11,8 +11,12 @@ import Firebase
 
 class ContainerViewController: UIViewController {
     
+    @IBOutlet weak var sortButton: UIButton!
+    var child: InventoryTableViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.sortButton.setTitle("Sort By Name", forState: UIControlState.Normal)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
         
     }
@@ -20,6 +24,26 @@ class ContainerViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "embedSegue"){
+            if let destination = segue.destinationViewController as? InventoryTableViewController {
+                destination.parent = self;
+                self.child = destination
+            }
+        }
+    }
+    
+    
+    @IBAction func sortButtonTapped(sender: AnyObject) {
+        if(self.sortButton.titleLabel!.text == "Sort By Name"){
+            child.sortItemsAlphabetically()
+            self.sortButton.setTitle("Sort By Number", forState: UIControlState.Normal)
+        } else {
+            child.sortItemsByNumber()
+            self.sortButton.setTitle("Sort By Name", forState: UIControlState.Normal)
+        }
     }
 
 }

@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -369,7 +371,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Pdh-Iv-chZ" kind="presentation" id="8zI-JA-GW4"/>
+                                    <segue destination="9bK-Op-K5W" kind="presentation" id="nyk-VM-okS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZf-6T-Nvp">
@@ -417,64 +419,84 @@
             <point key="canvasLocation" x="-278.5" y="846.5"/>
         </scene>
         <!--Container View Controller-->
-        <scene sceneID="1Qn-gN-1bF">
+        <scene sceneID="zTj-Li-QCx">
             <objects>
-                <viewController id="Pdh-Iv-chZ" customClass="ContainerViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9bK-Op-K5W" customClass="ContainerViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BBE-OC-4ct"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZGk-9h-uNB"/>
+                        <viewControllerLayoutGuide type="top" id="0ir-ei-GEW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cc5-Q6-doV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e71-Vj-V7y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="J3J-S1-0Kg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-Ai-bIb">
-                                <rect key="frame" x="-8" y="65" width="608" height="535"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ts-yP-GpU">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <connections>
-                                    <segue destination="KdT-Ev-lxr" kind="embed" id="oaY-2O-sNt"/>
+                                    <segue destination="KdT-Ev-lxr" kind="embed" identifier="embedSegue" id="5Ob-cw-EVU"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rG-aK-g4v">
-                                <rect key="frame" x="0.0" y="20" width="100" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyr-Zw-rXv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yng-IK-Mzd">
+                                        <rect key="frame" x="0.0" y="20" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Usi-H1-zKt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="15"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7Ps-jk-OmA" kind="presentation" id="UMC-uK-HLY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPo-Ek-EwV">
+                                        <rect key="frame" x="450" y="20" width="150" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="46J-Ov-W99"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sortButtonTapped:" destination="9bK-Op-K5W" eventType="touchUpInside" id="Qaw-EF-B3j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="hec-zS-7zU"/>
+                                    <constraint firstItem="UPo-Ek-EwV" firstAttribute="baseline" secondItem="yng-IK-Mzd" secondAttribute="firstBaseline" id="KRs-Dv-dWZ"/>
+                                    <constraint firstItem="UPo-Ek-EwV" firstAttribute="top" secondItem="zyr-Zw-rXv" secondAttribute="top" constant="20" id="LHb-7v-izy"/>
+                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="baseline" secondItem="UPo-Ek-EwV" secondAttribute="firstBaseline" id="LjC-Up-jdP"/>
+                                    <constraint firstAttribute="bottom" secondItem="yng-IK-Mzd" secondAttribute="bottom" constant="12" id="hFe-56-dd7"/>
+                                    <constraint firstAttribute="trailing" secondItem="UPo-Ek-EwV" secondAttribute="trailing" id="oqk-Fo-aig"/>
+                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="leading" secondItem="zyr-Zw-rXv" secondAttribute="leading" id="qrc-hy-z8Q"/>
+                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="top" secondItem="zyr-Zw-rXv" secondAttribute="top" constant="20" id="zFc-Or-pdZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="15"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7Ps-jk-OmA" kind="presentation" id="2H2-mY-iqQ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iNVENTORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-Zz-RWq">
-                                <rect key="frame" x="108" y="24" width="150" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="TXC-WV-j7K"/>
-                                    <constraint firstAttribute="height" constant="21" id="Yqj-5w-2pa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Lxu-Ai-bIb" firstAttribute="top" secondItem="4rG-aK-g4v" secondAttribute="bottom" constant="15" id="6H7-1L-uue"/>
-                            <constraint firstItem="Lxu-Ai-bIb" firstAttribute="top" secondItem="ktk-Zz-RWq" secondAttribute="bottom" constant="20" id="8d0-SG-pqy"/>
-                            <constraint firstAttribute="trailing" secondItem="Lxu-Ai-bIb" secondAttribute="trailing" constant="-225" id="ALt-fr-hX7"/>
-                            <constraint firstItem="4rG-aK-g4v" firstAttribute="top" secondItem="ktk-Zz-RWq" secondAttribute="top" constant="-4" id="Dv4-2M-k3u"/>
-                            <constraint firstItem="4rG-aK-g4v" firstAttribute="leading" secondItem="e71-Vj-V7y" secondAttribute="leading" id="NW8-Zo-28H"/>
-                            <constraint firstItem="ZGk-9h-uNB" firstAttribute="top" secondItem="Lxu-Ai-bIb" secondAttribute="bottom" constant="67" id="VcH-Vo-ceN"/>
-                            <constraint firstItem="4rG-aK-g4v" firstAttribute="top" secondItem="BBE-OC-4ct" secondAttribute="bottom" id="dLg-vV-y1k"/>
-                            <constraint firstAttribute="trailing" secondItem="ktk-Zz-RWq" secondAttribute="trailing" constant="117" id="i7e-iQ-KAE"/>
-                            <constraint firstItem="Lxu-Ai-bIb" firstAttribute="leading" secondItem="e71-Vj-V7y" secondAttribute="leadingMargin" constant="-24" id="yFF-Q5-cTD"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="leading" secondItem="J3J-S1-0Kg" secondAttribute="leading" id="9DJ-JS-e0D"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="leading" secondItem="7ts-yP-GpU" secondAttribute="leading" id="DFH-bO-RMb"/>
+                            <constraint firstItem="7ts-yP-GpU" firstAttribute="top" secondItem="zyr-Zw-rXv" secondAttribute="bottom" constant="8" symbolic="YES" id="QlO-eI-rgy"/>
+                            <constraint firstItem="7ts-yP-GpU" firstAttribute="top" secondItem="J3J-S1-0Kg" secondAttribute="top" constant="70" id="ZJ0-Pm-l5H"/>
+                            <constraint firstItem="7ts-yP-GpU" firstAttribute="bottom" secondItem="Cc5-Q6-doV" secondAttribute="top" id="aMY-uP-Ctk"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="top" secondItem="J3J-S1-0Kg" secondAttribute="top" id="bzW-jq-RTi"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="trailing" secondItem="7ts-yP-GpU" secondAttribute="trailing" id="eCc-EF-iYt"/>
+                            <constraint firstAttribute="trailing" secondItem="zyr-Zw-rXv" secondAttribute="trailing" id="gEv-Oi-a5u"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sortButton" destination="UPo-Ek-EwV" id="J2n-m6-fKk"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SPx-e2-uas" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CR0-gn-kuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371.5" y="846.5"/>
+            <point key="canvasLocation" x="1104" y="132"/>
         </scene>
         <!--Inventory Table View Controller-->
         <scene sceneID="Nf8-oR-lVh">
@@ -563,7 +585,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1n-aU-dPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949.5" y="846.5"/>
+            <point key="canvasLocation" x="991.5" y="889.5"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="64d-fP-gDM">
@@ -731,7 +753,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Pdh-Iv-chZ" kind="presentation" id="bEk-Ta-hzy"/>
+                                    <segue destination="9bK-Op-K5W" kind="presentation" id="W6m-x8-CnA"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OiR-Iw-HXW">
@@ -757,8 +779,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8zI-JA-GW4"/>
-        <segue reference="2H2-mY-iqQ"/>
+        <segue reference="nyk-VM-okS"/>
+        <segue reference="UMC-uK-HLY"/>
         <segue reference="6Qm-Sr-Yph"/>
     </inferredMetricsTieBreakers>
 </document>
