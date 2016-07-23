@@ -9,10 +9,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-InventoryManagementTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-InventoryManagementUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5E180F34D8ECEF3D7B6E726B5AA36406</key>
+		<key>60D6969A974C118D1EBEC614C2C501EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADB23AAC45BB11F2E2BCB7495B787E17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7FC145FFC2FDCD5AB047AA4D55F9720</key>
 		<dict>
 			<key>primary</key>
 			<true/>
