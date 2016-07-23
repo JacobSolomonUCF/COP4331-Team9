@@ -153,12 +153,26 @@ class InventoryTableViewController: UITableViewController {
 
 
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        _ = tableView.indexPathForSelectedRow!
+        if let _ = tableView.cellForRowAtIndexPath(indexPath) {
+            self.performSegueWithIdentifier("updateItemSegue", sender: self)
+        }
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "updateItemSegue"){
+            if let destination = segue.destinationViewController as? UpdateItemViewController {
+                let path = tableView.indexPathForSelectedRow
+                let cell = tableView.cellForRowAtIndexPath(path!) as! InventoryTableViewCell
+                destination.prevItemName = cell.nameLabel.text!
+                destination.prevItemNumber = cell.numberLabel.text!
+                destination.prevItemQuantity = cell.quantityLabel.text!
+            }
+        }
+    }
 
+    
 }

@@ -24,6 +24,7 @@
 		AC2889541D35881300C3225F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2889521D35881300C3225F /* GoogleService-Info.plist */; };
 		AC2889551D35881300C3225F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889531D35881300C3225F /* WelcomeViewController.swift */; };
 		AC2889571D35D44500C3225F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2889561D35D44500C3225F /* CreateAccountViewController.swift */; };
+		AC69F84A1D43BE9900F7A7F3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69F8491D43BE9900F7A7F3 /* ContainerViewController.swift */; };
 		DA6F75D9F755C7B5485841D8 /* Pods_InventoryManagementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9634623B300986BA7D7A6F5A /* Pods_InventoryManagementTests.framework */; };
 		E0FBAFFE55A70D60CAE059BC /* Pods_InventoryManagementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD309569F6446A048F3815 /* Pods_InventoryManagementUITests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		AC2889521D35881300C3225F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC2889531D35881300C3225F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AC2889561D35D44500C3225F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		AC69F8491D43BE9900F7A7F3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		B0712041233830D0D1049100 /* Pods-InventoryManagementUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagementUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagementUITests/Pods-InventoryManagementUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBDD309569F6446A048F3815 /* Pods_InventoryManagementUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryManagementUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF05F3D2677C439FA40CA76C /* Pods-InventoryManagementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryManagementTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InventoryManagementTests/Pods-InventoryManagementTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				16F2769F1D38297F00F30D1A /* addItemController.swift */,
 				AC1C8FCD1D40634300A5E004 /* InventoryTableViewController.swift */,
 				165F90F71D42E05C00C09FAF /* UpdateItemViewController.swift */,
+				AC69F8491D43BE9900F7A7F3 /* ContainerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				167F61AF1D2EC6F000C3DCEC /* LoginViewController.swift in Sources */,
 				16F276A01D38297F00F30D1A /* addItemController.swift in Sources */,
 				167F61AD1D2EC6F000C3DCEC /* AppDelegate.swift in Sources */,
+				AC69F84A1D43BE9900F7A7F3 /* ContainerViewController.swift in Sources */,
 				AC1C8FCE1D40634300A5E004 /* InventoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

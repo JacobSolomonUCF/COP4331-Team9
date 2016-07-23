@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,6 +8,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Bauhaus_.ttf">
+            <string>Bauhaus</string>
             <string>Bauhaus</string>
             <string>Bauhaus</string>
             <string>Bauhaus</string>
@@ -357,7 +358,7 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" identifier="logOutWelcome" action="showViewController:sender:" id="6Qm-Sr-Yph"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXU-xT-YS7">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXU-xT-YS7">
                                 <rect key="frame" x="20" y="250" width="335" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -368,10 +369,10 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Bw4-fM-M9Z" kind="presentation" id="yZp-Jq-aTv"/>
+                                    <segue destination="Pdh-Iv-chZ" kind="presentation" id="8zI-JA-GW4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZf-6T-Nvp">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZf-6T-Nvp">
                                 <rect key="frame" x="20" y="325" width="335" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -394,29 +395,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-4f-tMG">
-                                <rect key="frame" x="20" y="397" width="335" height="45"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="2bN-8a-CZt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="20"/>
-                                <state key="normal" title="Update Item">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9cm-Ly-umI" firstAttribute="centerX" secondItem="rIE-Om-ToF" secondAttribute="centerX" id="0GK-g5-vay"/>
                             <constraint firstItem="tXU-xT-YS7" firstAttribute="trailing" secondItem="kZf-6T-Nvp" secondAttribute="trailing" id="1th-HE-c8g"/>
-                            <constraint firstItem="kZf-6T-Nvp" firstAttribute="leading" secondItem="vbs-4f-tMG" secondAttribute="leading" id="7UG-aT-8ZK"/>
-                            <constraint firstItem="vbs-4f-tMG" firstAttribute="top" secondItem="kZf-6T-Nvp" secondAttribute="bottom" constant="30" id="DfU-c2-wh7"/>
                             <constraint firstItem="9cm-Ly-umI" firstAttribute="leading" secondItem="tXU-xT-YS7" secondAttribute="leading" id="OS0-YC-8gc"/>
-                            <constraint firstItem="kZf-6T-Nvp" firstAttribute="trailing" secondItem="vbs-4f-tMG" secondAttribute="trailing" id="OmQ-Jl-8VT"/>
                             <constraint firstItem="WP1-yg-qnf" firstAttribute="top" secondItem="Hkf-p8-bAM" secondAttribute="bottom" id="QSJ-OV-og6"/>
                             <constraint firstItem="kZf-6T-Nvp" firstAttribute="top" secondItem="tXU-xT-YS7" secondAttribute="bottom" constant="30" id="dfT-PX-Lmw"/>
-                            <constraint firstItem="uhO-LU-qDb" firstAttribute="top" secondItem="vbs-4f-tMG" secondAttribute="bottom" constant="222" id="ntf-da-9mQ"/>
                             <constraint firstItem="WP1-yg-qnf" firstAttribute="leading" secondItem="rIE-Om-ToF" secondAttribute="leading" id="uCU-jh-TTA"/>
                             <constraint firstItem="9cm-Ly-umI" firstAttribute="leading" secondItem="rIE-Om-ToF" secondAttribute="leadingMargin" constant="4" id="uSF-my-cbK"/>
                             <constraint firstItem="tXU-xT-YS7" firstAttribute="leading" secondItem="kZf-6T-Nvp" secondAttribute="leading" id="uTz-FF-Bhp"/>
@@ -428,7 +414,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8c-iC-hB2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422.5" y="836.5"/>
+            <point key="canvasLocation" x="465.5" y="1030.5"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="1Qn-gN-1bF">
+            <objects>
+                <viewController id="Pdh-Iv-chZ" customClass="ContainerViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BBE-OC-4ct"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZGk-9h-uNB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e71-Vj-V7y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-Ai-bIb">
+                                <rect key="frame" x="-8" y="65" width="608" height="535"/>
+                                <connections>
+                                    <segue destination="KdT-Ev-lxr" kind="embed" id="oaY-2O-sNt"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rG-aK-g4v">
+                                <rect key="frame" x="0.0" y="20" width="100" height="30"/>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Ps-jk-OmA" kind="presentation" id="2H2-mY-iqQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iNVENTORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-Zz-RWq">
+                                <rect key="frame" x="225" y="20" width="150" height="21"/>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPx-e2-uas" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="310"/>
         </scene>
         <!--Inventory Table View Controller-->
         <scene sceneID="Nf8-oR-lVh">
@@ -443,7 +471,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HzP-P8-WOP" id="bWW-1l-NWx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ItemNumberLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOg-1q-4gN">
@@ -482,6 +510,7 @@
                                     <outlet property="nameLabel" destination="sdW-rs-geZ" id="WuH-5P-HRI"/>
                                     <outlet property="numberLabel" destination="iOg-1q-4gN" id="5dk-QG-5yw"/>
                                     <outlet property="quantityLabel" destination="LxJ-J0-gZQ" id="9mw-2v-Ab9"/>
+                                    <segue destination="Dly-oY-3rk" kind="presentation" identifier="updateItemSegue" id="rsZ-YA-r7W"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -491,11 +520,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ki5-9j-fS7">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="ftn-ht-cvm">
-                            <connections>
-                                <segue destination="7Ps-jk-OmA" kind="presentation" id="4rd-ro-mBB"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ftn-ht-cvm"/>
                         <barButtonItem key="rightBarButtonItem" title="Sort By Name" id="9pN-gM-i7T">
                             <connections>
                                 <action selector="sortButtonTapped:" destination="KdT-Ev-lxr" id="P6D-qc-1nq"/>
@@ -510,7 +535,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1n-aU-dPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001.5" y="1194.5"/>
+            <point key="canvasLocation" x="1937.5" y="350.5"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="64d-fP-gDM">
@@ -605,33 +630,15 @@
             </objects>
             <point key="canvasLocation" x="-291.5" y="1207.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wh8-Vm-4Mu">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bw4-fM-M9Z" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kzl-qN-YNE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="KdT-Ev-lxr" kind="relationship" relationship="rootViewController" id="Xac-Na-K0d"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BHy-2b-3M1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1048.5" y="439.5"/>
-        </scene>
-        <!--Add Item-->
+        <!--Update Item-->
         <scene sceneID="cp5-4A-L0W">
             <objects>
-                <viewController title="Add Item" id="Dly-oY-3rk" customClass="UpdateItemViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Update Item" id="Dly-oY-3rk" customClass="UpdateItemViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9jy-e3-CuV"/>
                         <viewControllerLayoutGuide type="bottom" id="r2t-4a-5W8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="THF-4M-P8J" customClass="Up">
+                    <view key="view" contentMode="scaleToFill" id="THF-4M-P8J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -680,7 +687,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addPressed:" destination="Dly-oY-3rk" eventType="touchUpInside" id="I0R-Qf-1en"/>
+                                    <action selector="updateButtonTapped:" destination="Dly-oY-3rk" eventType="touchUpInside" id="JYm-mQ-Y7E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75a-b8-ODP">
@@ -694,7 +701,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KdT-Ev-lxr" kind="show" id="oJb-Ce-Q2J"/>
+                                    <segue destination="Pdh-Iv-chZ" kind="presentation" id="bEk-Ta-hzy"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OiR-Iw-HXW">
@@ -707,19 +714,21 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="itemName" destination="hqm-3f-ZZJ" id="HMi-Ve-ZZ9"/>
-                        <outlet property="itemNumber" destination="Ukw-H8-qWq" id="q38-OM-0Y4"/>
-                        <outlet property="itemQuantity" destination="OiR-Iw-HXW" id="wDD-my-BjS"/>
+                        <outlet property="cancelButton" destination="75a-b8-ODP" id="jPO-Yt-bGf"/>
+                        <outlet property="itemName" destination="hqm-3f-ZZJ" id="Wbf-AD-NfX"/>
+                        <outlet property="itemNumber" destination="Ukw-H8-qWq" id="bwe-RK-IGb"/>
+                        <outlet property="itemQuantity" destination="OiR-Iw-HXW" id="UtP-X3-MvA"/>
+                        <outlet property="updateButton" destination="ZYZ-Rc-n1J" id="PpZ-Tu-Iyl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSN-dT-FoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574.5" y="1117.5"/>
+            <point key="canvasLocation" x="2210.5" y="1321.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4rd-ro-mBB"/>
-        <segue reference="oJb-Ce-Q2J"/>
+        <segue reference="8zI-JA-GW4"/>
+        <segue reference="2H2-mY-iqQ"/>
         <segue reference="6Qm-Sr-Yph"/>
     </inferredMetricsTieBreakers>
 </document>
