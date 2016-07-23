@@ -11,7 +11,7 @@ import Firebase
 import Foundation
 import FirebaseDatabase
 
-class UpdateItemViewController: UIViewController {
+class UpdateItemViewController: UIViewController, UITextFieldDelegate {
 
     var prevItemName: String!
     var prevItemNumber: String!
@@ -30,8 +30,19 @@ class UpdateItemViewController: UIViewController {
         self.itemNumber.text = prevItemNumber
         self.itemQuantity.text = prevItemQuantity
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
+        
+        self.hideKeyboardWhenTappedAround()
+        self.itemName.delegate = self
+        self.itemNumber.delegate = self
+        self.itemQuantity.delegate = self
     
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

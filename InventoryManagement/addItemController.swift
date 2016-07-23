@@ -11,7 +11,7 @@ import Firebase
 import Foundation
 import FirebaseDatabase
 
-class addItemController: UIViewController {
+class addItemController: UIViewController, UITextFieldDelegate {
     
 
     
@@ -25,7 +25,17 @@ class addItemController: UIViewController {
         super.viewDidLoad()
        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
+        
+        self.hideKeyboardWhenTappedAround()
+        self.itemName.delegate = self
+        self.itemNumber.delegate = self
+        self.itemQuantity.delegate = self
     
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,6 +102,12 @@ class addItemController: UIViewController {
                         self.addButton.enabled = true
                         self.cancelButton.enabled = true
                     })
+                    
+                    let alertController = UIAlertController(title: "Complete!", message: "Item #" + self.itemNumber.text! + " added successfully", preferredStyle: .Alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.presentViewController(alertController, animated: true, completion: nil)
                     
                     self.itemName.text = ""
                     self.itemNumber.text = ""

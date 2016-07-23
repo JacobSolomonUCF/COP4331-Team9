@@ -29,7 +29,8 @@ class InventoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.allowsSelection = true
+        self.tableView.allowsSelectionDuringEditing = true
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.inventoryTableView.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
         // Uncomment the following line to preserve selection between presentations
@@ -44,12 +45,12 @@ class InventoryTableViewController: UITableViewController {
     
     
     func sortItemsAlphabetically(){
-        items.sortInPlace{$0.name.lowercaseString < $1.name.lowercaseString}
+        self.items.sortInPlace{$0.name.lowercaseString < $1.name.lowercaseString}
         self.inventoryTableView.reloadData()
     }
     
     func sortItemsByNumber(){
-        items.sortInPlace{$0.number < $1.number}
+        self.items.sortInPlace{Int($0.number) < Int($1.number)}
         self.inventoryTableView.reloadData()
     }
     
@@ -107,13 +108,13 @@ class InventoryTableViewController: UITableViewController {
     }
     
 
-    
+    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    
+    */
 
     
     // Override to support editing the table view.
@@ -153,6 +154,7 @@ class InventoryTableViewController: UITableViewController {
     // MARK: - Navigation
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("test")
         _ = tableView.indexPathForSelectedRow!
         if let _ = tableView.cellForRowAtIndexPath(indexPath) {
             self.performSegueWithIdentifier("updateItemSegue", sender: self)

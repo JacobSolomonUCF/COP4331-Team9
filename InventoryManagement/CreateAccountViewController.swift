@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
@@ -17,12 +17,22 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.jpg")!)
         // Sign user out if logged in
         if (FIRAuth.auth()?.currentUser) != nil {
             try! FIRAuth.auth()?.signOut()
         }
+        self.hideKeyboardWhenTappedAround()
+        self.emailField.delegate = self
+        self.passField.delegate = self
+        self.passConfirmField.delegate = self
         
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {

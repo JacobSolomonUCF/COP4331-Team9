@@ -38,10 +38,10 @@ class ContainerViewController: UIViewController {
     
     @IBAction func sortButtonTapped(sender: AnyObject) {
         if(self.sortButton.titleLabel!.text == "Sort By Name"){
-            child.sortItemsAlphabetically()
+            self.child.sortItemsAlphabetically()
             self.sortButton.setTitle("Sort By Number", forState: UIControlState.Normal)
         } else {
-            child.sortItemsByNumber()
+            self.child.sortItemsByNumber()
             self.sortButton.setTitle("Sort By Name", forState: UIControlState.Normal)
         }
     }

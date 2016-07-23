@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -205,8 +204,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-9w-PaN">
                                 <rect key="frame" x="0.0" y="20" width="75" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="VTY-9w-PaN" secondAttribute="height" multiplier="5:2" id="IE0-Vg-dhh"/>
-                                    <constraint firstAttribute="height" constant="30" id="wLa-Th-C07"/>
+                                    <constraint firstAttribute="height" constant="30" id="COa-gk-qWd"/>
+                                    <constraint firstAttribute="width" constant="75" id="g8M-EV-q1g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="15"/>
                                 <state key="normal" title="Back">
@@ -217,13 +216,69 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backRegister" action="showViewController:sender:" id="yWD-eD-g62"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4K-Zr-tO6">
+                                <rect key="frame" x="20" y="175" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4CY-9a-h9q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-iV-Gt2">
+                                <rect key="frame" x="20" y="222" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ndj-UV-7Rw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEX-EB-nr7">
+                                <rect key="frame" x="20" y="348" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0O6-qN-eHp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jgk-Pg-vE0">
+                                <rect key="frame" x="20" y="310" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VMU-X7-hwe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k96-YJ-EnI">
+                                <rect key="frame" x="20" y="75" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="aeV-Pl-MEv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22y-h2-o7j">
+                                <rect key="frame" x="20" y="260" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="52T-WQ-dEC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="n0R-Eo-kji">
+                                <rect key="frame" x="20" y="401" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dnb-vz-8iO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi2-5I-CMS">
                                 <rect key="frame" x="20" y="500" width="335" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="H84-CT-2PW"/>
-                                    <constraint firstAttribute="width" secondItem="hi2-5I-CMS" secondAttribute="height" multiplier="67:9" id="ORu-ex-f7g"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -233,94 +288,41 @@
                                     <segue destination="7Ps-jk-OmA" kind="showDetail" identifier="register" id="Vn6-wq-5Mh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4K-Zr-tO6">
-                                <rect key="frame" x="20" y="175" width="335" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="G4K-Zr-tO6" secondAttribute="height" multiplier="67:9" id="DZr-2R-8eB"/>
-                                    <constraint firstAttribute="height" constant="45" id="d9O-73-wix"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-iV-Gt2">
-                                <rect key="frame" x="20" y="222" width="335" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="g6z-iV-Gt2" secondAttribute="height" multiplier="67:6" id="Ekz-Kq-qBZ"/>
-                                    <constraint firstAttribute="height" constant="30" id="lJp-4r-t8i"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEX-EB-nr7">
-                                <rect key="frame" x="20" y="348" width="335" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="fxh-rz-vD2"/>
-                                    <constraint firstAttribute="width" secondItem="zEX-EB-nr7" secondAttribute="height" multiplier="67:9" id="gOx-Qi-HfB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jgk-Pg-vE0">
-                                <rect key="frame" x="20" y="310" width="335" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OTU-2E-qJx"/>
-                                    <constraint firstAttribute="width" secondItem="jgk-Pg-vE0" secondAttribute="height" multiplier="67:6" id="mUa-XG-SSZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k96-YJ-EnI">
-                                <rect key="frame" x="20" y="75" width="335" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="k96-YJ-EnI" secondAttribute="height" multiplier="67:9" id="Ahj-EB-5SD"/>
-                                    <constraint firstAttribute="height" constant="45" id="qqx-Qx-7M6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22y-h2-o7j">
-                                <rect key="frame" x="20" y="260" width="335" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="22y-h2-o7j" secondAttribute="height" multiplier="67:9" id="RXa-f6-HwR"/>
-                                    <constraint firstAttribute="height" constant="45" id="Vx1-Tz-wnj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="n0R-Eo-kji">
-                                <rect key="frame" x="20" y="401" width="335" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IXV-3W-kr1"/>
-                                    <constraint firstAttribute="width" secondItem="n0R-Eo-kji" secondAttribute="height" multiplier="67:6" id="yRQ-BH-p1W"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zEX-EB-nr7" firstAttribute="top" secondItem="jgk-Pg-vE0" secondAttribute="bottom" constant="8" symbolic="YES" id="7IZ-PN-b4y"/>
-                            <constraint firstItem="k96-YJ-EnI" firstAttribute="leading" secondItem="G4K-Zr-tO6" secondAttribute="leading" id="DRn-Vs-iRI"/>
-                            <constraint firstItem="jgk-Pg-vE0" firstAttribute="leading" secondItem="zEX-EB-nr7" secondAttribute="leading" id="O89-bJ-jto"/>
-                            <constraint firstItem="n0R-Eo-kji" firstAttribute="top" secondItem="zEX-EB-nr7" secondAttribute="bottom" constant="5" id="P89-ag-Ih1"/>
-                            <constraint firstItem="G4K-Zr-tO6" firstAttribute="top" secondItem="k96-YJ-EnI" secondAttribute="bottom" constant="55" id="PLr-ZN-JTf"/>
-                            <constraint firstItem="k96-YJ-EnI" firstAttribute="top" secondItem="VTY-9w-PaN" secondAttribute="bottom" constant="25" id="Pdc-h6-Ij0"/>
-                            <constraint firstItem="22y-h2-o7j" firstAttribute="leading" secondItem="jgk-Pg-vE0" secondAttribute="leading" id="ZPo-7O-OCY"/>
-                            <constraint firstItem="g6z-iV-Gt2" firstAttribute="top" secondItem="G4K-Zr-tO6" secondAttribute="bottom" constant="2" id="cni-er-KPq"/>
-                            <constraint firstItem="VTY-9w-PaN" firstAttribute="top" secondItem="09c-gO-dIh" secondAttribute="bottom" id="dgC-7R-M26"/>
-                            <constraint firstItem="jgk-Pg-vE0" firstAttribute="top" secondItem="22y-h2-o7j" secondAttribute="bottom" constant="5" id="erh-8H-poa"/>
-                            <constraint firstItem="hi2-5I-CMS" firstAttribute="top" secondItem="n0R-Eo-kji" secondAttribute="bottom" constant="72" id="gNy-fo-glp"/>
-                            <constraint firstItem="VTY-9w-PaN" firstAttribute="leading" secondItem="bJo-Og-7xs" secondAttribute="leading" id="j3f-xA-UyS"/>
-                            <constraint firstItem="22y-h2-o7j" firstAttribute="top" secondItem="g6z-iV-Gt2" secondAttribute="bottom" constant="8" symbolic="YES" id="jmy-gJ-UoN"/>
-                            <constraint firstItem="n0R-Eo-kji" firstAttribute="leading" secondItem="hi2-5I-CMS" secondAttribute="leading" id="oTk-tg-HM9"/>
-                            <constraint firstItem="k96-YJ-EnI" firstAttribute="centerX" secondItem="bJo-Og-7xs" secondAttribute="centerX" id="qoO-bH-xCz"/>
-                            <constraint firstItem="G4K-Zr-tO6" firstAttribute="leading" secondItem="g6z-iV-Gt2" secondAttribute="leading" id="sYw-g3-AhB"/>
-                            <constraint firstItem="zEX-EB-nr7" firstAttribute="leading" secondItem="n0R-Eo-kji" secondAttribute="leading" id="syQ-aS-i2c"/>
-                            <constraint firstItem="g6z-iV-Gt2" firstAttribute="leading" secondItem="22y-h2-o7j" secondAttribute="leading" id="wWW-SH-UKX"/>
+                            <constraint firstItem="g6z-iV-Gt2" firstAttribute="top" secondItem="G4K-Zr-tO6" secondAttribute="bottom" constant="2" id="4EH-cJ-Gjb"/>
+                            <constraint firstItem="jgk-Pg-vE0" firstAttribute="top" secondItem="22y-h2-o7j" secondAttribute="bottom" constant="5" id="4v8-92-YkO"/>
+                            <constraint firstItem="zEX-EB-nr7" firstAttribute="top" secondItem="jgk-Pg-vE0" secondAttribute="bottom" id="79n-8K-bFV"/>
+                            <constraint firstItem="G4K-Zr-tO6" firstAttribute="leading" secondItem="g6z-iV-Gt2" secondAttribute="leading" id="7YW-L0-A7M"/>
+                            <constraint firstItem="G4K-Zr-tO6" firstAttribute="top" secondItem="k96-YJ-EnI" secondAttribute="bottom" constant="55" id="HfY-hy-QPc"/>
+                            <constraint firstItem="jgk-Pg-vE0" firstAttribute="leading" secondItem="zEX-EB-nr7" secondAttribute="leading" id="Ln1-ZN-Ela"/>
+                            <constraint firstItem="22y-h2-o7j" firstAttribute="leading" secondItem="jgk-Pg-vE0" secondAttribute="leading" id="NEz-24-r6i"/>
+                            <constraint firstItem="zEX-EB-nr7" firstAttribute="top" secondItem="jgk-Pg-vE0" secondAttribute="bottom" constant="8" symbolic="YES" id="RMx-jy-vGw"/>
+                            <constraint firstItem="k96-YJ-EnI" firstAttribute="centerX" secondItem="bJo-Og-7xs" secondAttribute="centerX" id="XGp-M2-7PC"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="top" secondItem="zEX-EB-nr7" secondAttribute="bottom" constant="8" symbolic="YES" id="a53-lE-Phn"/>
+                            <constraint firstItem="BFl-Cp-AeV" firstAttribute="top" secondItem="hi2-5I-CMS" secondAttribute="bottom" constant="122" id="bCT-2X-qz6"/>
+                            <constraint firstItem="zEX-EB-nr7" firstAttribute="leading" secondItem="n0R-Eo-kji" secondAttribute="leading" id="ba1-JU-pND"/>
+                            <constraint firstItem="k96-YJ-EnI" firstAttribute="trailing" secondItem="G4K-Zr-tO6" secondAttribute="trailing" id="dN2-sy-I5w"/>
+                            <constraint firstItem="g6z-iV-Gt2" firstAttribute="trailing" secondItem="22y-h2-o7j" secondAttribute="trailing" id="ds6-Et-7EH"/>
+                            <constraint firstItem="k96-YJ-EnI" firstAttribute="leading" secondItem="bJo-Og-7xs" secondAttribute="leadingMargin" constant="4" id="eO7-8t-yZq"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="trailing" secondItem="hi2-5I-CMS" secondAttribute="trailing" id="g0b-tg-pFl"/>
+                            <constraint firstItem="VTY-9w-PaN" firstAttribute="leading" secondItem="bJo-Og-7xs" secondAttribute="leading" id="gSe-wv-YTe"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="leading" secondItem="hi2-5I-CMS" secondAttribute="leading" id="kKv-Gj-CA7"/>
+                            <constraint firstItem="22y-h2-o7j" firstAttribute="trailing" secondItem="jgk-Pg-vE0" secondAttribute="trailing" id="lfR-cC-QiH"/>
+                            <constraint firstItem="22y-h2-o7j" firstAttribute="top" secondItem="g6z-iV-Gt2" secondAttribute="bottom" id="lte-Hb-MeR"/>
+                            <constraint firstItem="22y-h2-o7j" firstAttribute="top" secondItem="g6z-iV-Gt2" secondAttribute="bottom" constant="8" symbolic="YES" id="nTv-rj-Npk"/>
+                            <constraint firstItem="k96-YJ-EnI" firstAttribute="top" secondItem="VTY-9w-PaN" secondAttribute="bottom" constant="25" id="oN6-ag-6tb"/>
+                            <constraint firstItem="G4K-Zr-tO6" firstAttribute="trailing" secondItem="g6z-iV-Gt2" secondAttribute="trailing" id="q8u-6E-LWy"/>
+                            <constraint firstItem="g6z-iV-Gt2" firstAttribute="top" secondItem="G4K-Zr-tO6" secondAttribute="bottom" id="qEe-uh-icr"/>
+                            <constraint firstItem="VTY-9w-PaN" firstAttribute="top" secondItem="09c-gO-dIh" secondAttribute="bottom" id="qz2-22-JtM"/>
+                            <constraint firstItem="zEX-EB-nr7" firstAttribute="trailing" secondItem="n0R-Eo-kji" secondAttribute="trailing" id="rfv-69-jb5"/>
+                            <constraint firstItem="jgk-Pg-vE0" firstAttribute="trailing" secondItem="zEX-EB-nr7" secondAttribute="trailing" id="u8Z-bd-64D"/>
+                            <constraint firstItem="hi2-5I-CMS" firstAttribute="top" secondItem="n0R-Eo-kji" secondAttribute="bottom" constant="69" id="waA-v3-bez"/>
+                            <constraint firstItem="g6z-iV-Gt2" firstAttribute="leading" secondItem="22y-h2-o7j" secondAttribute="leading" id="x9X-2w-VsW"/>
+                            <constraint firstItem="jgk-Pg-vE0" firstAttribute="top" secondItem="22y-h2-o7j" secondAttribute="bottom" id="xCe-cc-sc3"/>
+                            <constraint firstItem="n0R-Eo-kji" firstAttribute="top" secondItem="zEX-EB-nr7" secondAttribute="bottom" id="xXo-1b-abu"/>
+                            <constraint firstItem="k96-YJ-EnI" firstAttribute="leading" secondItem="G4K-Zr-tO6" secondAttribute="leading" id="yXv-QK-Uk9"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -391,7 +393,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="iNVENTORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cm-Ly-umI">
                                 <rect key="frame" x="20" y="75" width="335" height="153"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3Xa-Kq-Cae"/>
+                                    <constraint firstAttribute="height" constant="153" id="3Xa-Kq-Cae"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="58"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -404,9 +406,11 @@
                             <constraint firstItem="tXU-xT-YS7" firstAttribute="trailing" secondItem="kZf-6T-Nvp" secondAttribute="trailing" id="1th-HE-c8g"/>
                             <constraint firstItem="9cm-Ly-umI" firstAttribute="leading" secondItem="tXU-xT-YS7" secondAttribute="leading" id="OS0-YC-8gc"/>
                             <constraint firstItem="WP1-yg-qnf" firstAttribute="top" secondItem="Hkf-p8-bAM" secondAttribute="bottom" id="QSJ-OV-og6"/>
+                            <constraint firstItem="9cm-Ly-umI" firstAttribute="trailing" secondItem="rIE-Om-ToF" secondAttribute="trailingMargin" id="UgH-t4-KQC"/>
                             <constraint firstItem="kZf-6T-Nvp" firstAttribute="top" secondItem="tXU-xT-YS7" secondAttribute="bottom" constant="30" id="dfT-PX-Lmw"/>
+                            <constraint firstItem="9cm-Ly-umI" firstAttribute="leading" secondItem="rIE-Om-ToF" secondAttribute="leadingMargin" id="mmf-GQ-M0y"/>
                             <constraint firstItem="WP1-yg-qnf" firstAttribute="leading" secondItem="rIE-Om-ToF" secondAttribute="leading" id="uCU-jh-TTA"/>
-                            <constraint firstItem="9cm-Ly-umI" firstAttribute="leading" secondItem="rIE-Om-ToF" secondAttribute="leadingMargin" constant="4" id="uSF-my-cbK"/>
+                            <constraint firstItem="9cm-Ly-umI" firstAttribute="leading" secondItem="rIE-Om-ToF" secondAttribute="leadingMargin" id="uSF-my-cbK"/>
                             <constraint firstItem="tXU-xT-YS7" firstAttribute="leading" secondItem="kZf-6T-Nvp" secondAttribute="leading" id="uTz-FF-Bhp"/>
                             <constraint firstItem="9cm-Ly-umI" firstAttribute="trailing" secondItem="tXU-xT-YS7" secondAttribute="trailing" id="wva-k6-OfR"/>
                             <constraint firstItem="9cm-Ly-umI" firstAttribute="top" secondItem="WP1-yg-qnf" secondAttribute="bottom" constant="25" id="yUU-qo-vqG"/>
@@ -427,22 +431,22 @@
                         <viewControllerLayoutGuide type="bottom" id="Cc5-Q6-doV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="J3J-S1-0Kg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ts-yP-GpU">
-                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <connections>
                                     <segue destination="KdT-Ev-lxr" kind="embed" identifier="embedSegue" id="5Ob-cw-EVU"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyr-Zw-rXv">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yng-IK-Mzd">
                                         <rect key="frame" x="0.0" y="20" width="100" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="Usi-H1-zKt"/>
+                                            <constraint firstAttribute="width" constant="100" id="sUb-eL-Pbx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="15"/>
                                         <state key="normal" title="Back">
@@ -452,10 +456,10 @@
                                             <segue destination="7Ps-jk-OmA" kind="presentation" id="UMC-uK-HLY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPo-Ek-EwV">
-                                        <rect key="frame" x="450" y="20" width="150" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPo-Ek-EwV">
+                                        <rect key="frame" x="225" y="20" width="150" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="46J-Ov-W99"/>
+                                            <constraint firstAttribute="width" constant="150" id="ssL-Wa-Kho"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="15"/>
                                         <state key="normal">
@@ -468,26 +472,26 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="UPo-Ek-EwV" firstAttribute="baseline" secondItem="yng-IK-Mzd" secondAttribute="firstBaseline" id="KRs-Dv-dWZ"/>
-                                    <constraint firstItem="UPo-Ek-EwV" firstAttribute="top" secondItem="zyr-Zw-rXv" secondAttribute="top" constant="20" id="LHb-7v-izy"/>
-                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="baseline" secondItem="UPo-Ek-EwV" secondAttribute="firstBaseline" id="LjC-Up-jdP"/>
-                                    <constraint firstAttribute="bottom" secondItem="yng-IK-Mzd" secondAttribute="bottom" constant="12" id="hFe-56-dd7"/>
-                                    <constraint firstAttribute="trailing" secondItem="UPo-Ek-EwV" secondAttribute="trailing" id="oqk-Fo-aig"/>
-                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="leading" secondItem="zyr-Zw-rXv" secondAttribute="leading" id="qrc-hy-z8Q"/>
-                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="top" secondItem="zyr-Zw-rXv" secondAttribute="top" constant="20" id="zFc-Or-pdZ"/>
+                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="bottom" secondItem="UPo-Ek-EwV" secondAttribute="bottom" id="Q7K-za-74Z"/>
+                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="top" secondItem="UPo-Ek-EwV" secondAttribute="top" id="XSK-pL-aIO"/>
+                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="top" secondItem="zyr-Zw-rXv" secondAttribute="top" constant="20" id="hbf-lo-kBU"/>
+                                    <constraint firstItem="yng-IK-Mzd" firstAttribute="leading" secondItem="zyr-Zw-rXv" secondAttribute="leading" id="oGE-sU-GU9"/>
+                                    <constraint firstAttribute="bottom" secondItem="yng-IK-Mzd" secondAttribute="bottom" constant="12" id="wMy-ux-NDS"/>
+                                    <constraint firstAttribute="trailing" secondItem="UPo-Ek-EwV" secondAttribute="trailing" id="zHM-1H-lz0"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="leading" secondItem="J3J-S1-0Kg" secondAttribute="leading" id="9DJ-JS-e0D"/>
-                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="leading" secondItem="7ts-yP-GpU" secondAttribute="leading" id="DFH-bO-RMb"/>
-                            <constraint firstItem="7ts-yP-GpU" firstAttribute="top" secondItem="zyr-Zw-rXv" secondAttribute="bottom" constant="8" symbolic="YES" id="QlO-eI-rgy"/>
-                            <constraint firstItem="7ts-yP-GpU" firstAttribute="top" secondItem="J3J-S1-0Kg" secondAttribute="top" constant="70" id="ZJ0-Pm-l5H"/>
-                            <constraint firstItem="7ts-yP-GpU" firstAttribute="bottom" secondItem="Cc5-Q6-doV" secondAttribute="top" id="aMY-uP-Ctk"/>
-                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="top" secondItem="J3J-S1-0Kg" secondAttribute="top" id="bzW-jq-RTi"/>
-                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="trailing" secondItem="7ts-yP-GpU" secondAttribute="trailing" id="eCc-EF-iYt"/>
-                            <constraint firstAttribute="trailing" secondItem="zyr-Zw-rXv" secondAttribute="trailing" id="gEv-Oi-a5u"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="trailing" secondItem="7ts-yP-GpU" secondAttribute="trailing" id="2Dv-hj-okN"/>
+                            <constraint firstItem="7ts-yP-GpU" firstAttribute="top" secondItem="J3J-S1-0Kg" secondAttribute="top" constant="70" id="6CE-dw-ua9"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="leading" secondItem="7ts-yP-GpU" secondAttribute="leading" id="6xS-rz-KSU"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="leading" secondItem="J3J-S1-0Kg" secondAttribute="leading" id="9kn-0a-yqa"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="top" secondItem="J3J-S1-0Kg" secondAttribute="top" id="BPA-8y-rEI"/>
+                            <constraint firstItem="zyr-Zw-rXv" firstAttribute="top" secondItem="0ir-ei-GEW" secondAttribute="bottom" constant="10" id="DF2-W3-hsH"/>
+                            <constraint firstItem="7ts-yP-GpU" firstAttribute="bottom" secondItem="Cc5-Q6-doV" secondAttribute="top" id="EyU-T7-4Ep"/>
+                            <constraint firstAttribute="trailing" secondItem="zyr-Zw-rXv" secondAttribute="trailing" id="Q1I-UX-6bc"/>
+                            <constraint firstItem="7ts-yP-GpU" firstAttribute="top" secondItem="zyr-Zw-rXv" secondAttribute="bottom" constant="8" symbolic="YES" id="aL9-Ip-Eai"/>
                         </constraints>
                     </view>
                     <connections>
@@ -502,7 +506,7 @@
         <scene sceneID="Nf8-oR-lVh">
             <objects>
                 <tableViewController id="KdT-Ev-lxr" customClass="InventoryTableViewController" customModule="InventoryManagement" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ked-Rp-4Zc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ked-Rp-4Zc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -599,45 +603,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-mM-rMt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-mM-rMt">
                                 <rect key="frame" x="20" y="123" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="nRm-YI-LO2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEu-gr-WAV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEu-gr-WAV">
                                 <rect key="frame" x="20" y="152" width="335" height="30"/>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3n-V6-Tc1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3n-V6-Tc1">
                                 <rect key="frame" x="20" y="190" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="BLc-p0-j4p"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-kl-5RR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-kl-5RR">
                                 <rect key="frame" x="20" y="61" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fqP-Y1-fdt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EN3-aG-dYL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EN3-aG-dYL">
                                 <rect key="frame" x="20" y="219" width="335" height="30"/>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-wC-Qon">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-wC-Qon">
                                 <rect key="frame" x="20" y="257" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="a8p-ws-NDg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q56-mJ-Uf8">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q56-mJ-Uf8">
                                 <rect key="frame" x="20" y="602" width="164" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="aIN-oO-SCd"/>
+                                    <constraint firstAttribute="height" constant="45" id="Rzc-CU-T5j"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <state key="normal" title="Add Item">
@@ -647,11 +663,11 @@
                                     <action selector="addPressed:" destination="XBA-lg-HU2" eventType="touchUpInside" id="7sW-XN-rrl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JL-00-GoW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JL-00-GoW">
                                 <rect key="frame" x="192" y="602" width="163" height="45"/>
                                 <color key="backgroundColor" red="0.99923092126846313" green="0.19729864597320557" blue="0.0035093333572149277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="eiD-2s-AW1"/>
+                                    <constraint firstAttribute="width" constant="163" id="oI2-Wj-xoR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <state key="normal" title="Cancel">
@@ -661,13 +677,43 @@
                                     <segue destination="7Ps-jk-OmA" kind="show" id="3Pu-lI-M2x"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kl2-Z0-TOi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kl2-Z0-TOi">
                                 <rect key="frame" x="20" y="286" width="335" height="30"/>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9JL-00-GoW" firstAttribute="baseline" secondItem="Q56-mJ-Uf8" secondAttribute="firstBaseline" id="0iW-g0-0pa"/>
+                            <constraint firstItem="Q56-mJ-Uf8" firstAttribute="top" secondItem="9JL-00-GoW" secondAttribute="top" id="1z0-CZ-dcR"/>
+                            <constraint firstItem="NmK-kl-5RR" firstAttribute="leading" secondItem="SpC-Ka-kRQ" secondAttribute="leadingMargin" constant="4" id="5f4-Ma-w6n"/>
+                            <constraint firstItem="NmK-kl-5RR" firstAttribute="trailing" secondItem="ADL-mM-rMt" secondAttribute="trailing" id="6E5-IP-for"/>
+                            <constraint firstItem="wFy-wC-Qon" firstAttribute="leading" secondItem="Kl2-Z0-TOi" secondAttribute="leading" id="8C6-1S-dqa"/>
+                            <constraint firstItem="e3n-V6-Tc1" firstAttribute="leading" secondItem="EN3-aG-dYL" secondAttribute="leading" id="ALu-im-ws0"/>
+                            <constraint firstItem="EN3-aG-dYL" firstAttribute="leading" secondItem="wFy-wC-Qon" secondAttribute="leading" id="CWh-a9-oUE"/>
+                            <constraint firstItem="ADL-mM-rMt" firstAttribute="leading" secondItem="uEu-gr-WAV" secondAttribute="leading" id="Ghx-yg-Vip"/>
+                            <constraint firstItem="wFy-wC-Qon" firstAttribute="trailing" secondItem="Kl2-Z0-TOi" secondAttribute="trailing" id="IuW-zp-9Lt"/>
+                            <constraint firstItem="NmK-kl-5RR" firstAttribute="top" secondItem="o0P-Cz-nXe" secondAttribute="bottom" constant="41" id="N31-S7-zAx"/>
+                            <constraint firstItem="EN3-aG-dYL" firstAttribute="top" secondItem="e3n-V6-Tc1" secondAttribute="bottom" constant="8" symbolic="YES" id="PXD-wd-XNj"/>
+                            <constraint firstItem="NmK-kl-5RR" firstAttribute="leading" secondItem="ADL-mM-rMt" secondAttribute="leading" id="Q7L-pf-Sf3"/>
+                            <constraint firstItem="uEu-gr-WAV" firstAttribute="top" secondItem="ADL-mM-rMt" secondAttribute="bottom" constant="8" symbolic="YES" id="T5Q-fJ-ByC"/>
+                            <constraint firstItem="ADL-mM-rMt" firstAttribute="top" secondItem="NmK-kl-5RR" secondAttribute="bottom" constant="41" id="T6a-OJ-Q8V"/>
+                            <constraint firstItem="e3n-V6-Tc1" firstAttribute="trailing" secondItem="EN3-aG-dYL" secondAttribute="trailing" id="UMG-Ks-nWE"/>
+                            <constraint firstItem="Q56-mJ-Uf8" firstAttribute="leading" secondItem="SpC-Ka-kRQ" secondAttribute="leadingMargin" id="Ucv-Nf-oET"/>
+                            <constraint firstItem="Kl2-Z0-TOi" firstAttribute="top" secondItem="wFy-wC-Qon" secondAttribute="bottom" constant="8" symbolic="YES" id="bGY-50-bAV"/>
+                            <constraint firstItem="9JL-00-GoW" firstAttribute="leading" secondItem="Q56-mJ-Uf8" secondAttribute="trailing" constant="8" symbolic="YES" id="c57-P0-1jG"/>
+                            <constraint firstItem="e3n-V6-Tc1" firstAttribute="top" secondItem="uEu-gr-WAV" secondAttribute="bottom" constant="8" symbolic="YES" id="dFE-OJ-3L0"/>
+                            <constraint firstItem="uEu-gr-WAV" firstAttribute="leading" secondItem="e3n-V6-Tc1" secondAttribute="leading" id="eya-PG-Pz1"/>
+                            <constraint firstItem="wFy-wC-Qon" firstAttribute="top" secondItem="EN3-aG-dYL" secondAttribute="bottom" constant="8" symbolic="YES" id="jcM-Qi-ZpV"/>
+                            <constraint firstItem="Q56-mJ-Uf8" firstAttribute="baseline" secondItem="9JL-00-GoW" secondAttribute="firstBaseline" id="mYW-Fm-kkC"/>
+                            <constraint firstItem="uEu-gr-WAV" firstAttribute="trailing" secondItem="e3n-V6-Tc1" secondAttribute="trailing" id="nvi-Eh-BWx"/>
+                            <constraint firstItem="ADL-mM-rMt" firstAttribute="trailing" secondItem="uEu-gr-WAV" secondAttribute="trailing" id="oBb-Aa-16b"/>
+                            <constraint firstAttribute="bottom" secondItem="Q56-mJ-Uf8" secondAttribute="bottom" constant="20" symbolic="YES" id="pYk-NI-eOa"/>
+                            <constraint firstItem="Kl2-Z0-TOi" firstAttribute="trailing" secondItem="9JL-00-GoW" secondAttribute="trailing" id="qSU-OW-N3P"/>
+                            <constraint firstItem="EN3-aG-dYL" firstAttribute="trailing" secondItem="wFy-wC-Qon" secondAttribute="trailing" id="rhf-5q-gN5"/>
+                            <constraint firstItem="NmK-kl-5RR" firstAttribute="centerX" secondItem="SpC-Ka-kRQ" secondAttribute="centerX" id="ybu-z1-eAD"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -694,45 +740,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTV-v1-Q73">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTV-v1-Q73">
                                 <rect key="frame" x="20" y="123" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="MlI-7B-edg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqm-3f-ZZJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqm-3f-ZZJ">
                                 <rect key="frame" x="20" y="152" width="335" height="30"/>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dq-Fz-YCf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dq-Fz-YCf">
                                 <rect key="frame" x="20" y="190" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="tJ3-fg-AVr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UPDATE ITEM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWt-6U-yh2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPDATE ITEM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWt-6U-yh2">
                                 <rect key="frame" x="20" y="61" width="335" height="24"/>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ukw-H8-qWq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ukw-H8-qWq">
                                 <rect key="frame" x="20" y="219" width="335" height="30"/>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edR-9d-kCL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edR-9d-kCL">
                                 <rect key="frame" x="20" y="257" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EJV-we-wUX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYZ-Rc-n1J">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYZ-Rc-n1J">
                                 <rect key="frame" x="20" y="602" width="164" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="R05-1m-6qm"/>
+                                    <constraint firstAttribute="height" constant="45" id="ZHH-N7-ByT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <state key="normal" title="Update Item">
@@ -742,11 +797,11 @@
                                     <action selector="updateButtonTapped:" destination="Dly-oY-3rk" eventType="touchUpInside" id="JYm-mQ-Y7E"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75a-b8-ODP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75a-b8-ODP">
                                 <rect key="frame" x="192" y="602" width="163" height="45"/>
                                 <color key="backgroundColor" red="0.99923092130000002" green="0.19729864599999999" blue="0.0035093333570000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="XGO-t0-efh"/>
+                                    <constraint firstAttribute="width" constant="163" id="BSe-F9-YYX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="17"/>
                                 <state key="normal" title="Cancel">
@@ -756,13 +811,44 @@
                                     <segue destination="9bK-Op-K5W" kind="presentation" id="W6m-x8-CnA"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OiR-Iw-HXW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OiR-Iw-HXW">
                                 <rect key="frame" x="20" y="286" width="335" height="30"/>
                                 <fontDescription key="fontDescription" name="Bauhaus" family="Bauhaus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OiR-Iw-HXW" firstAttribute="top" secondItem="edR-9d-kCL" secondAttribute="bottom" constant="8" symbolic="YES" id="3Io-yU-zxV"/>
+                            <constraint firstItem="75a-b8-ODP" firstAttribute="leading" secondItem="ZYZ-Rc-n1J" secondAttribute="trailing" constant="8" symbolic="YES" id="3g3-mh-sYW"/>
+                            <constraint firstItem="edR-9d-kCL" firstAttribute="trailing" secondItem="OiR-Iw-HXW" secondAttribute="trailing" id="9Vb-Ea-LH3"/>
+                            <constraint firstItem="Ukw-H8-qWq" firstAttribute="trailing" secondItem="edR-9d-kCL" secondAttribute="trailing" id="ASW-Yy-uWj"/>
+                            <constraint firstAttribute="bottom" secondItem="ZYZ-Rc-n1J" secondAttribute="bottom" constant="20" symbolic="YES" id="BJq-cR-Xvy"/>
+                            <constraint firstItem="sTV-v1-Q73" firstAttribute="top" secondItem="SWt-6U-yh2" secondAttribute="bottom" constant="38" id="Ce1-UM-NMO"/>
+                            <constraint firstItem="5Dq-Fz-YCf" firstAttribute="trailing" secondItem="Ukw-H8-qWq" secondAttribute="trailing" id="EBh-cJ-H5u"/>
+                            <constraint firstItem="edR-9d-kCL" firstAttribute="top" secondItem="Ukw-H8-qWq" secondAttribute="bottom" constant="8" symbolic="YES" id="G7v-TC-cCU"/>
+                            <constraint firstItem="ZYZ-Rc-n1J" firstAttribute="leading" secondItem="THF-4M-P8J" secondAttribute="leadingMargin" id="HKp-A1-OX3"/>
+                            <constraint firstItem="SWt-6U-yh2" firstAttribute="leading" secondItem="sTV-v1-Q73" secondAttribute="leading" id="Iq2-H8-Hig"/>
+                            <constraint firstItem="ZYZ-Rc-n1J" firstAttribute="baseline" secondItem="75a-b8-ODP" secondAttribute="firstBaseline" id="RSw-m8-MyK"/>
+                            <constraint firstItem="Ukw-H8-qWq" firstAttribute="top" secondItem="5Dq-Fz-YCf" secondAttribute="bottom" constant="8" symbolic="YES" id="Sk1-Bd-bhe"/>
+                            <constraint firstItem="OiR-Iw-HXW" firstAttribute="leading" secondItem="ZYZ-Rc-n1J" secondAttribute="leading" id="UcZ-A3-IMk"/>
+                            <constraint firstItem="SWt-6U-yh2" firstAttribute="centerX" secondItem="THF-4M-P8J" secondAttribute="centerX" id="XW9-Se-XSa"/>
+                            <constraint firstItem="SWt-6U-yh2" firstAttribute="trailing" secondItem="sTV-v1-Q73" secondAttribute="trailing" id="brr-cf-dsl"/>
+                            <constraint firstItem="sTV-v1-Q73" firstAttribute="leading" secondItem="hqm-3f-ZZJ" secondAttribute="leading" id="eBm-t9-r7b"/>
+                            <constraint firstItem="edR-9d-kCL" firstAttribute="leading" secondItem="OiR-Iw-HXW" secondAttribute="leading" id="hUF-f7-Xao"/>
+                            <constraint firstItem="hqm-3f-ZZJ" firstAttribute="leading" secondItem="5Dq-Fz-YCf" secondAttribute="leading" id="hlr-PS-oh2"/>
+                            <constraint firstItem="hqm-3f-ZZJ" firstAttribute="trailing" secondItem="5Dq-Fz-YCf" secondAttribute="trailing" id="lna-nS-KPu"/>
+                            <constraint firstItem="5Dq-Fz-YCf" firstAttribute="leading" secondItem="Ukw-H8-qWq" secondAttribute="leading" id="lyJ-pe-isI"/>
+                            <constraint firstItem="ZYZ-Rc-n1J" firstAttribute="top" secondItem="75a-b8-ODP" secondAttribute="top" id="me0-vV-cC3"/>
+                            <constraint firstItem="sTV-v1-Q73" firstAttribute="trailing" secondItem="hqm-3f-ZZJ" secondAttribute="trailing" id="n7d-zq-RER"/>
+                            <constraint firstItem="OiR-Iw-HXW" firstAttribute="trailing" secondItem="75a-b8-ODP" secondAttribute="trailing" id="oM1-o4-GOP"/>
+                            <constraint firstItem="Ukw-H8-qWq" firstAttribute="leading" secondItem="edR-9d-kCL" secondAttribute="leading" id="qjO-qf-Rau"/>
+                            <constraint firstItem="5Dq-Fz-YCf" firstAttribute="top" secondItem="hqm-3f-ZZJ" secondAttribute="bottom" constant="8" symbolic="YES" id="rSD-N5-CJv"/>
+                            <constraint firstItem="SWt-6U-yh2" firstAttribute="top" secondItem="9jy-e3-CuV" secondAttribute="bottom" constant="61" id="sKb-qi-KGT"/>
+                            <constraint firstItem="SWt-6U-yh2" firstAttribute="leading" secondItem="THF-4M-P8J" secondAttribute="leadingMargin" constant="4" id="u9C-uQ-Xc0"/>
+                            <constraint firstItem="75a-b8-ODP" firstAttribute="baseline" secondItem="ZYZ-Rc-n1J" secondAttribute="firstBaseline" id="wX1-2q-TzE"/>
+                            <constraint firstItem="hqm-3f-ZZJ" firstAttribute="top" secondItem="sTV-v1-Q73" secondAttribute="bottom" constant="8" symbolic="YES" id="yjB-1Q-6Zf"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -780,7 +866,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="nyk-VM-okS"/>
-        <segue reference="UMC-uK-HLY"/>
-        <segue reference="6Qm-Sr-Yph"/>
+        <segue reference="Vn6-wq-5Mh"/>
+        <segue reference="yWD-eD-g62"/>
     </inferredMetricsTieBreakers>
 </document>
